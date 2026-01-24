@@ -1,0 +1,546 @@
+{
+  "common": {
+    "loading": "Chargement...",
+    "error": "Une erreur est survenue",
+    "backToTop": "Retour en haut",
+    "viewMore": "Voir plus",
+    "viewAll": "Voir tout",
+    "download": "Télécharger",
+    "close": "Fermer",
+    "open": "Ouvrir",
+    "menu": "Menu",
+    "search": "Rechercher",
+    "filter": "Filtrer",
+    "all": "Tous",
+    "send": "Envoyer",
+    "submit": "Soumettre",
+    "cancel": "Annuler",
+    "save": "Sauvegarder",
+    "edit": "Modifier",
+    "delete": "Supprimer",
+    "yes": "Oui",
+    "no": "Non"
+  },
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "projects": "Projets",
+    "stack": "Stack",
+    "videos": "Vidéos",
+    "cv": "CV",
+    "github": "GitHub",
+    "contact": "Contact",
+    "blog": "Blog"
+  },
+  "home": {
+    "hero": {
+      "greeting": "Bonjour, je suis",
+      "name": "Shay Acoca",
+      "title": "CTO Junior. Développeur Fullstack. Formé chez HackerU.",
+      "subtitle": "Je crée des interfaces modernes et des expériences utilisateur mémorables.",
+      "cta": "Découvrir mon univers",
+      "ctaSecondary": "Voir mes projets"
+    },
+    "services": {
+      "badge": "Services",
+      "title": "Comment je peux vous aider",
+      "subtitle": "Des solutions complètes pour transformer vos idées en produits digitaux performants",
+      "items": {
+        "frontend": {
+          "title": "Développement Frontend",
+          "description": "Applications React/Next.js performantes avec des interfaces modernes et des animations fluides.",
+          "feature1": "React / Next.js",
+          "feature2": "TypeScript",
+          "feature3": "Tailwind CSS",
+          "feature4": "Framer Motion"
+        },
+        "backend": {
+          "title": "Développement Backend",
+          "description": "APIs robustes et scalables avec Node.js, Python et architectures microservices.",
+          "feature1": "Node.js / Express",
+          "feature2": "Python / FastAPI",
+          "feature3": "PostgreSQL / MongoDB",
+          "feature4": "GraphQL / REST"
+        },
+        "design": {
+          "title": "Design UX/UI",
+          "description": "Interfaces utilisateur intuitives et esthétiques qui convertissent et engagent.",
+          "feature1": "Figma / Adobe XD",
+          "feature2": "Design Systems",
+          "feature3": "Prototypage",
+          "feature4": "Recherche Utilisateur"
+        },
+        "ai": {
+          "title": "Intelligence Artificielle",
+          "description": "Intégration de solutions IA et ML pour automatiser et optimiser vos processus.",
+          "feature1": "OpenAI / GPT-4",
+          "feature2": "LangChain",
+          "feature3": "TensorFlow",
+          "feature4": "NLP / Computer Vision"
+        },
+        "mobile": {
+          "title": "Applications Mobile",
+          "description": "Apps natives et cross-platform avec React Native pour iOS et Android.",
+          "feature1": "React Native",
+          "feature2": "Expo",
+          "feature3": "iOS / Android",
+          "feature4": "Push Notifications"
+        },
+        "consulting": {
+          "title": "Consulting CTO",
+          "description": "Accompagnement stratégique pour vos choix technologiques et votre roadmap produit.",
+          "feature1": "Architecture",
+          "feature2": "Recrutement Tech",
+          "feature3": "Roadmap Produit",
+          "feature4": "Due Diligence"
+        }
+      }
+    },
+    "testimonials": {
+      "title": "Ce que disent mes clients",
+      "subtitle": "Des collaborations réussies avec des startups et entreprises innovantes",
+      "items": {
+        "1": {
+          "content": "Un développeur exceptionnel qui comprend parfaitement les enjeux business. Son expertise technique combinée à sa vision produit a transformé notre startup.",
+          "role": "CEO"
+        },
+        "2": {
+          "content": "La qualité du code livré est remarquable. Architecture propre, documentation complète, et une communication fluide tout au long du projet.",
+          "role": "CTO"
+        },
+        "3": {
+          "content": "Notre plateforme e-commerce a vu ses conversions augmenter de 45% grâce aux optimisations UX et techniques mises en place.",
+          "role": "Head of Product"
+        }
+      }
+    },
+    "featured": {
+      "title": "Projets récents",
+      "subtitle": "Une sélection de mes réalisations les plus impactantes"
+    },
+    "stats": {
+      "projects": "Projets livrés",
+      "experience": "Années d'expérience",
+      "clients": "Clients satisfaits",
+      "technologies": "Technologies maîtrisées"
+    },
+    "cta": {
+      "badge": "Disponible pour de nouveaux projets",
+      "title": "Prêt à transformer",
+      "titleHighlight": "votre vision en réalité ?",
+      "description": "Que vous ayez besoin d'un CTO, d'un développeur fullstack ou d'un consultant tech, discutons de comment je peux vous aider à atteindre vos objectifs.",
+      "primary": "Discutons de votre projet",
+      "secondary": "Voir mon CV",
+      "footer": "Réponse sous 24h • Consultation gratuite • Sans engagement"
+    }
+  },
+  "about": {
+    "title": "À propos",
+    "subtitle": "Passionné par le code, le design et l'innovation",
+    "intro": "Développeur fullstack et CTO junior formé chez HackerU, passionné par la création d'interfaces modernes et d'expériences utilisateur mémorables.",
+    "mindset": {
+      "title": "Ma philosophie",
+      "items": {
+        "excellence": {
+          "title": "Excellence technique",
+          "description": "Code propre, typé et testé. TypeScript, bonnes pratiques et architecture solide sont mes fondamentaux."
+        },
+        "passion": {
+          "title": "Passion créative",
+          "description": "Animations fluides, interfaces modernes et expériences utilisateur mémorables. Le design est au cœur de mon code."
+        },
+        "learning": {
+          "title": "Apprentissage continu",
+          "description": "De HackerU à l'autoformation, je reste curieux et à jour sur les dernières technologies : React, Next.js, IA."
+        },
+        "vision": {
+          "title": "Vision CTO",
+          "description": "Penser architecture, scalabilité et équipe. Transformer des idées en produits qui font la différence."
+        }
+      }
+    },
+    "bio": {
+      "title": "Qui suis-je ?",
+      "p1": "Je suis <strong class=\"text-violet-600 dark:text-violet-400\">Shay Acoca</strong>, développeur fullstack, designer UX/UI et CTO junior. Originaire de France, j'ai découvert ma passion pour le code en 2022 et j'ai décidé de me reconvertir professionnellement. Ma formation intensive chez <strong class=\"text-violet-600 dark:text-violet-400\">HackerU</strong> m'a permis de maîtriser les technologies modernes : JavaScript, TypeScript, React, Node.js, et bien plus.",
+      "p2": "Ma passion va au-delà du code. Je suis fasciné par l'<strong class=\"text-violet-600 dark:text-violet-400\">expérience utilisateur</strong>, les <strong class=\"text-violet-600 dark:text-violet-400\">animations fluides</strong> et l'<strong class=\"text-violet-600 dark:text-violet-400\">innovation technologique</strong>. Chaque projet est une opportunité de repousser les limites, d'explorer de nouvelles interactions, de créer des interfaces qui marquent les esprits.",
+      "p3": "Mes ambitions actuelles : approfondir mes compétences en <strong class=\"text-violet-600 dark:text-violet-400\">Intelligence Artificielle</strong> (OpenAI API, LangChain, RAG), maîtriser les outils <strong class=\"text-violet-600 dark:text-violet-400\">DevOps</strong> (Docker, CI/CD, Kubernetes), et développer mon leadership en <strong class=\"text-violet-600 dark:text-violet-400\">collaboration technique</strong> pour accompagner des équipes produit.",
+      "p4": "Ma vision du rôle de <strong class=\"text-violet-600 dark:text-violet-400\">CTO</strong> : être le pont entre la vision business et l'excellence technique. Construire des architectures scalables, former des équipes passionnées, et livrer des produits qui font la différence. Le code propre, l'accessibilité et l'expérience utilisateur sont les piliers de ma philosophie."
+    },
+    "timeline": {
+      "title": "Mon parcours",
+      "items": {
+        "1": {
+          "title": "CTO Junior & Spécialisation Tech",
+          "description": "Conception du Portfolio CTO, spécialisation React/Next.js/IA et vision stratégique produit.",
+          "achievements": {
+            "0": "Architecture Next.js 14 App Router & Server Components",
+            "1": "Intégration d'IA (OpenAI, LangChain) dans des applications réelles",
+            "2": "Focus sur la performance (Core Web Vitals) et le SEO",
+            "3": "Veille technologique active : RAG, Agents IA, Edge Computing"
+          }
+        },
+        "2": {
+          "title": "Création de Projets Open Source",
+          "description": "Développement et maintenance de librairies et composants UI (OpticGlass, CardPro, FuturistCards).",
+          "achievements": {
+            "0": "OpticGlass : Effet de loupe performant avec gestion d'événements complexes",
+            "1": "CardPro : Librairie de composants accessibles (MIT License)",
+            "2": "FuturistCards : UI Design avancé et animations CSS 3D",
+            "3": "Documentation technique et gestion de version (Git/GitHub)"
+          }
+        },
+        "3": {
+          "title": "Formation Développeur Fullstack",
+          "description": "Formation intensive et structurante chez HackerU : du code 'vanilla' aux frameworks modernes.",
+          "achievements": {
+            "0": "Maîtrise des fondamentaux du web (HTML/CSS/JS)",
+            "1": "Développement Backend (Node.js, Express, MongoDB)",
+            "2": "Architecture MVC et conception de bases de données",
+            "3": "Méthodologies Agiles et travail en équipe"
+          }
+        },
+        "4": {
+          "title": "Transition Professionnelle",
+          "description": "Découverte de la programmation et décision de reconversion professionnelle vers le développement web.",
+          "achievements": {
+            "0": "Découverte du code via freeCodeCamp et ressources en ligne",
+            "1": "Premiers projets : sites statiques, landing pages, mini-jeux JavaScript",
+            "2": "Décision de rejoindre HackerU pour une formation intensive",
+            "3": "Construction d'une routine d'apprentissage quotidienne"
+          }
+        }
+      }
+    },
+    "skills": {
+      "title": "Compétences",
+      "subtitle": "Technologies et outils que je maîtrise"
+    },
+    "downloadCV": "Télécharger mon CV"
+  },
+  "projects": {
+    "title": "Projets",
+    "subtitle": "Portfolio de mes réalisations",
+    "filters": {
+      "all": "Tous",
+      "react": "React",
+      "node": "Node.js",
+      "ecommerce": "E-commerce",
+      "ia": "IA",
+      "fullstack": "Fullstack",
+      "design": "Design"
+    },
+    "card": {
+      "viewProject": "Voir le projet",
+      "viewCode": "Voir sur GitHub",
+      "liveDemo": "Accéder à la démo"
+    },
+    "detail": {
+      "overview": "Aperçu",
+      "challenges": "Défis Techniques",
+      "solutions": "Solutions Apportées",
+      "impact": "Résultat & Impact",
+      "stack": "Stack technique",
+      "timeline": "Timeline",
+      "testimonial": "Témoignage client",
+      "links": "Liens"
+    },
+    "items": {
+      "food-recipe-app": {
+        "title": "Food — Application de recettes",
+        "description": "Application de gestion de recettes avec affichage responsive et tri par catégorie.",
+        "longDescription": "Application web complète permettant de gérer, organiser et rechercher des recettes culinaires. Interface intuitive avec système de filtrage par catégorie et design responsive adapté à tous les écrans.",
+        "challenges": {
+          "1": "Création d'un CRUD complet et persistant",
+          "2": "Système de recherche et filtrage temps réel",
+          "3": "Optimisation des performances d'affichage"
+        },
+        "solutions": {
+          "1": "Architecture propre et modulaire",
+          "2": "Algorithme de filtrage optimisé",
+          "3": "Lazy loading des images"
+        },
+        "impact": "Une expérience utilisateur fluide pour gérer ses repas au quotidien."
+      },
+      "optic-glass": {
+        "title": "OpticGlass — E-commerce lunettes",
+        "description": "Site e-commerce interactif pour lunettes avec effet de loupe dynamique.",
+        "longDescription": "Expérience e-commerce immersive proposant une visualisation détaillée des produits grâce à un effet de loupe interactif développé sur mesure. Gestion du panier et catalogue produits.",
+        "challenges": {
+          "1": "Développement de l'effet loupe sans librairie tierce",
+          "2": "Gestion précise des événements souris/tactile",
+          "3": "Performance du rendu sur mobile"
+        },
+        "solutions": {
+          "1": "Utilisation de l'API Canvas pour le traitement d'image",
+          "2": "Optimisation via requestAnimationFrame",
+          "3": "Design responsive first"
+        },
+        "impact": "Augmentation de l'engagement grâce à l'interactivité produit."
+      },
+      "futuristcards": {
+        "title": "FuturistCards — Cartes de visite digitales",
+        "description": "Générateur de cartes de visite digitales avec animations 3D et style futuriste.",
+        "longDescription": "Plateforme de création de cartes de visite digitales interactives. Utilisation d'animations CSS 3D avancées et d'effets de verre (Glassmorphism) pour un rendu moderne et impactant.",
+        "challenges": {
+          "1": "Rendu 3D performant en CSS pur",
+          "2": "Compatibilité inter-navigateurs des effets",
+          "3": "Interface d'édition intuitive"
+        },
+        "solutions": {
+          "1": "Utilisation de transform-style: preserve-3d",
+          "2": "Variables CSS pour la personnalisation dynamique",
+          "3": "Composants React isolés"
+        },
+        "impact": "Une solution moderne pour le networking professionnel."
+      },
+      "cardpro-ui-library": {
+        "title": "CardPro — Librairie UI de cartes",
+        "description": "Librairie de composants UI modulaires spécialisée dans les cartes.",
+        "longDescription": "Bibliothèque open-source de composants de cartes (Cards) hautement personnalisables et accessibles. Conçue pour accélérer le développement d'interfaces React cohérentes.",
+        "challenges": {
+          "1": "Architecture de composants flexible (Compound Pattern)",
+          "2": "Gestion stricte de l'accessibilité (A11y)",
+          "3": "Packaging et distribution via NPM"
+        },
+        "solutions": {
+          "1": "Utilisation de TypeScript pour le typage fort",
+          "2": "Documentation complète avec Storybook",
+          "3": "Tests unitaires et visuels"
+        },
+        "impact": "Accélère le développement UI avec des briques fiables."
+      },
+      "portfolio-cto": {
+        "title": "Portfolio CTO",
+        "description": "Portfolio moderne avec Next.js 14, TypeScript, Framer Motion et système multilingue.",
+        "longDescription": "Portfolio professionnel présentant mes compétences de CTO Junior et développeur fullstack. Construit avec les dernières technologies : Next.js 14 App Router, TypeScript, Tailwind CSS, Framer Motion et système i18n personnalisé.",
+        "challenges": {
+          "1": "Architecture App Router et Server Components",
+          "2": "Optimisation SEO et Core Web Vitals",
+          "3": "Internationalisation fluide (FR/EN)"
+        },
+        "solutions": {
+          "1": "Structure modulaire par fonctionnalités",
+          "2": "Génération de métadonnées dynamiques",
+          "3": "Context React pour la gestion de la langue"
+        },
+        "impact": "Une vitrine technologique performante démontrant mon expertise CTO."
+      },
+      "design-system-kit": {
+        "title": "Design System — React UI Kit",
+        "description": "Bibliothèque de composants React accessible avec documentation complète.",
+        "longDescription": "Design system personnel avec composants React réutilisables, tokens de design et documentation. Conforme aux standards d'accessibilité WCAG.",
+        "challenges": {
+          "1": "Création de 50+ composants atomiques",
+          "2": "Documentation interactive (Storybook)",
+          "3": "Cohérence visuelle et fonctionnelle"
+        },
+        "solutions": {
+          "1": "Utilisation de Radix UI pour la base",
+          "2": "Configuration Storybook avancée",
+          "3": "Tokens de design centralisés"
+        },
+        "impact": "Accélère le développement de nouveaux projets avec une base UI solide."
+      }
+    }
+  },
+  "stack": {
+    "title": "Ma Stack",
+    "subtitle": "Technologies et outils que j'utilise au quotidien",
+    "intro": {
+      "title": "Mon approche : efficacité et scalabilité",
+      "p1": "Je privilégie une <strong class=\"text-violet-600 dark:text-violet-400\">stack moderne et éprouvée</strong> qui permet de livrer rapidement tout en garantissant la maintenabilité à long terme. Mon choix se porte sur des technologies fortement typées et orientées composant.",
+      "p2": "<strong class=\"text-violet-600 dark:text-violet-400\">Next.js et TypeScript</strong> forment la colonne vertébrale de mes projets pour leur performance et robustesse. Je les combine à une approche produit modulaire pour créer des expériences utilisateur riches et fluides."
+    },
+    "categories": {
+      "frontend": {
+        "label": "Frontend",
+        "description": "React, Next.js, Framer Motion : pour des interfaces réactives, fluides et esthétiques."
+      },
+      "backend": {
+        "label": "Backend",
+        "description": "Node.js, Python, FastAPI : pour des architectures serveurs solides et performantes."
+      },
+      "devops": {
+        "label": "DevOps",
+        "description": "Docker, Vercel, GitHub Actions : automatisation des déploiements et intégration continue."
+      },
+      "design": {
+        "label": "Design",
+        "description": "Figma, Illustrator : conception de maquettes pixel-perfect et design systems."
+      },
+      "nocode": {
+        "label": "No-Code",
+        "description": "Webflow, Notion : prototypage rapide et gestion de contenu efficace."
+      },
+      "other": {
+        "label": "IA / API",
+        "description": "OpenAI, LangChain : intégration d'intelligence artificielle pour des apps innovantes."
+      }
+    }
+  },
+  "videos": {
+    "title": "Galerie Vidéos",
+    "subtitle": "Tutoriels techniques et démonstrations",
+    "watchVideo": "Regarder la vidéo",
+    "duration": "Durée",
+    "items": {
+      "1": {
+        "title": "Dashboard IA",
+        "description": "Interface de data temps réel avec insights IA. Visualisation de données complexe et prédictions."
+      },
+      "2": {
+        "title": "E-commerce Headless",
+        "description": "Solution Shopify + Next.js ultra-performante. Tunnel d'achat optimisé et SEO-friendly."
+      },
+      "3": {
+        "title": "Générateur IA",
+        "description": "Application intégrant GPT-4 et LangChain pour la génération de contenu contextuel."
+      },
+      "4": {
+        "title": "Design System",
+        "description": "UI Kit scalable avec plus de 50 composants. Documentation complète et tokens de design."
+      },
+      "5": {
+        "title": "App Mobile Fintech",
+        "description": "Application React Native avec gestion de paiements et sécurité biométrique."
+      },
+      "6": {
+        "title": "Collaboration Tool",
+        "description": "Outil collaboratif temps réel utilisant WebRTC et CRDT pour l'édition simultanée."
+      }
+    }
+  },
+  "cv": {
+    "title": "Curriculum Vitae",
+    "subtitle": "Mon parcours professionnel complet",
+    "experience": "Expérience professionnelle",
+    "education": "Formation",
+    "certifications": "Certifications",
+    "skills": "Compétences",
+    "downloadPDF": "Télécharger en PDF",
+    "hireMe": "Recrutez-moi",
+    "proposeProject": "Proposez un projet",
+    "current": "Actuel"
+  },
+  "github": {
+    "title": "Open Source",
+    "subtitle": "Mes contributions et projets publics",
+    "stats": {
+      "repos": "Repositories",
+      "stars": "Stars",
+      "commits": "Commits",
+      "followers": "Followers"
+    },
+    "viewOnGitHub": "Voir sur GitHub",
+    "badges": {
+      "cleanCode": "Code Propre",
+      "tested": "Tests 100%",
+      "restful": "API RESTful"
+    },
+    "repos": {
+      "food": {
+        "description": "Application de gestion de recettes avec affichage responsive et tri par catégorie"
+      },
+      "opticglass": {
+        "description": "Effet de loupe dynamique sur image avec gestion optimisée du curseur"
+      },
+      "futuristcards": {
+        "description": "Composants de cartes animées avec transitions fluides et design system moderne"
+      },
+      "cardpro": {
+        "description": "Librairie de cartes UI modulaire et accessible sous licence MIT"
+      },
+      "portfolio-cto": {
+        "description": "Portfolio moderne avec Next.js 14, TypeScript, Framer Motion et système multilingue"
+      },
+      "design-system": {
+        "description": "Bibliothèque de composants React accessible avec documentation complète"
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Discutons de votre projet",
+    "form": {
+      "name": "Nom complet",
+      "email": "Email",
+      "company": "Entreprise (optionnel)",
+      "type": "Type de demande",
+      "types": {
+        "recruitment": "Recrutement",
+        "collaboration": "Partenariat",
+        "freelance": "Freelance",
+        "other": "Autre"
+      },
+      "placeholders": {
+        "recruitment": "Bonjour Shay,\n\nNous recherchons un développeur fullstack / CTO junior pour rejoindre notre équipe. Votre profil nous intéresse particulièrement.\n\nPouvons-nous échanger sur cette opportunité ?",
+        "collaboration": "Bonjour Shay,\n\nJe représente [Entreprise] et nous serions intéressés par un partenariat technique autour de [Sujet].\n\nDiscutons-en !",
+        "freelance": "Bonjour Shay,\n\nNous avons besoin d'un expert React/Next.js pour une mission de [Durée]. Le projet consiste à [Description].\n\nQuelles sont vos disponibilités ?",
+        "other": "Bonjour Shay,\n\nJe vous contacte pour [Raison].\n\n[Votre message ici]",
+        "default": "Décrivez votre projet ou votre demande..."
+      },
+      "message": "Votre message",
+      "file": "Pièce jointe (optionnel)",
+      "filePlaceholder": "Glissez un fichier ici",
+      "fileTypes": "PDF, DOC, DOCX (max 10MB)",
+      "submit": "Envoyer le message",
+      "success": "Message envoyé avec succès !",
+      "error": "Erreur lors de l'envoi. Veuillez réessayer."
+    },
+    "info": {
+      "email": "Email",
+      "location": "Localisation",
+      "availability": "Disponibilité",
+      "availableNow": "Disponible pour de nouvelles opportunités"
+    }
+  },
+  "footer": {
+    "rights": "Tous droits réservés",
+    "madeWith": "Fait avec",
+    "and": "et",
+    "builtWith": "Construit avec Next.js 14 et Tailwind CSS"
+  },
+  "theme": {
+    "light": "Clair",
+    "dark": "Sombre",
+    "system": "Système"
+  },
+  "language": {
+    "fr": "Français",
+    "en": "English"
+  },
+  "seo": {
+    "home": {
+      "title": "Shay Acoca - CTO Junior & Développeur Fullstack | Portfolio",
+      "description": "Développeur fullstack formé chez HackerU, spécialisé en React, Next.js, TypeScript et animations CSS. Découvrez mes projets open-source et compétences."
+    },
+    "about": {
+      "title": "À propos de Shay Acoca - CTO Junior & Développeur Fullstack",
+      "description": "Découvrez mon parcours chez HackerU, ma passion pour le code et le design, et ma vision du rôle de CTO."
+    },
+    "projects": {
+      "title": "Projets - Shay Acoca | food, OpticGlass, FuturistCards, CardPro",
+      "description": "Explorez mes projets open-source : applications web, composants UI animés, librairies accessibles et plus encore."
+    },
+    "contact": {
+      "title": "Contact - Shay Acoca | Recrutement, Freelance, Partenariat",
+      "description": "Contactez-moi pour discuter d'une opportunité de recrutement, mission freelance ou collaboration technique."
+    },
+    "stack": {
+      "title": "Stack Technique - Shay Acoca | React, Next.js, Node.js, IA",
+      "description": "Ma stack technique : React, Next.js, TypeScript, Node.js, Tailwind CSS, Framer Motion et outils IA."
+    },
+    "cv": {
+      "title": "CV - Shay Acoca | CTO Junior & Développeur Fullstack",
+      "description": "Téléchargez mon CV : formation HackerU, projets open-source, compétences techniques et certifications."
+    },
+    "github": {
+      "title": "GitHub - Shay Acoca | Projets Open Source",
+      "description": "Découvrez mes repositories GitHub : food, OpticGlass, FuturistCards, CardPro et plus encore."
+    },
+    "videos": {
+      "title": "Tutoriels Vidéo - Shay Acoca | Dashboard IA, E-commerce, Design",
+      "description": "Tutoriels vidéo sur le développement web : Dashboard IA, E-commerce Headless, Générateur IA, Design System."
+    }
+  }
+}

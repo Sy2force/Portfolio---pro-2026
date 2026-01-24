@@ -1,0 +1,546 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "backToTop": "Back to top",
+    "viewMore": "View more",
+    "viewAll": "View all",
+    "download": "Download",
+    "close": "Close",
+    "open": "Open",
+    "menu": "Menu",
+    "search": "Search",
+    "filter": "Filter",
+    "all": "All",
+    "send": "Send",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "save": "Save",
+    "edit": "Edit",
+    "delete": "Delete",
+    "yes": "Yes",
+    "no": "No"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "stack": "Stack",
+    "videos": "Videos",
+    "cv": "Resume",
+    "github": "GitHub",
+    "contact": "Contact",
+    "blog": "Blog"
+  },
+  "home": {
+    "hero": {
+      "greeting": "Hi, I'm",
+      "name": "Shay Acoca",
+      "title": "Junior CTO. Fullstack Developer. HackerU Graduate.",
+      "subtitle": "I create modern interfaces and memorable user experiences.",
+      "cta": "Discover my universe",
+      "ctaSecondary": "View my projects"
+    },
+    "services": {
+      "badge": "Services",
+      "title": "How I can help you",
+      "subtitle": "Complete solutions to transform your ideas into high-performing digital products",
+      "items": {
+        "frontend": {
+          "title": "Frontend Development",
+          "description": "High-performance React/Next.js applications with modern interfaces and fluid animations.",
+          "feature1": "React / Next.js",
+          "feature2": "TypeScript",
+          "feature3": "Tailwind CSS",
+          "feature4": "Framer Motion"
+        },
+        "backend": {
+          "title": "Backend Development",
+          "description": "Robust and scalable APIs with Node.js, Python, and microservices architectures.",
+          "feature1": "Node.js / Express",
+          "feature2": "Python / FastAPI",
+          "feature3": "PostgreSQL / MongoDB",
+          "feature4": "GraphQL / REST"
+        },
+        "design": {
+          "title": "UX/UI Design",
+          "description": "Intuitive and aesthetic user interfaces that convert and engage.",
+          "feature1": "Figma / Adobe XD",
+          "feature2": "Design Systems",
+          "feature3": "Prototyping",
+          "feature4": "User Research"
+        },
+        "ai": {
+          "title": "Artificial Intelligence",
+          "description": "Integration of AI and ML solutions to automate and optimize your processes.",
+          "feature1": "OpenAI / GPT-4",
+          "feature2": "LangChain",
+          "feature3": "TensorFlow",
+          "feature4": "NLP / Computer Vision"
+        },
+        "mobile": {
+          "title": "Mobile Applications",
+          "description": "Native and cross-platform apps with React Native for iOS and Android.",
+          "feature1": "React Native",
+          "feature2": "Expo",
+          "feature3": "iOS / Android",
+          "feature4": "Push Notifications"
+        },
+        "consulting": {
+          "title": "CTO Consulting",
+          "description": "Strategic support for your technological choices and product roadmap.",
+          "feature1": "Architecture",
+          "feature2": "Tech Recruitment",
+          "feature3": "Product Roadmap",
+          "feature4": "Due Diligence"
+        }
+      }
+    },
+    "testimonials": {
+      "title": "What my clients say",
+      "subtitle": "Successful collaborations with startups and innovative companies",
+      "items": {
+        "1": {
+          "content": "An exceptional developer who perfectly understands business challenges. His technical expertise combined with his product vision transformed our startup.",
+          "role": "CEO"
+        },
+        "2": {
+          "content": "The quality of the delivered code is remarkable. Clean architecture, complete documentation, and fluid communication throughout the project.",
+          "role": "CTO"
+        },
+        "3": {
+          "content": "Our e-commerce platform saw a 45% increase in conversions thanks to the UX and technical optimizations put in place.",
+          "role": "Head of Product"
+        }
+      }
+    },
+    "featured": {
+      "title": "Recent Projects",
+      "subtitle": "A selection of my most impactful work"
+    },
+    "stats": {
+      "projects": "Projects delivered",
+      "experience": "Years of experience",
+      "clients": "Happy clients",
+      "technologies": "Technologies mastered"
+    },
+    "cta": {
+      "badge": "Available for new projects",
+      "title": "Ready to transform",
+      "titleHighlight": "your vision into reality?",
+      "description": "Whether you need a CTO, a fullstack developer, or a tech consultant, let's discuss how I can help you achieve your goals.",
+      "primary": "Let's discuss your project",
+      "secondary": "View my resume",
+      "footer": "Response within 24h • Free consultation • No commitment"
+    }
+  },
+  "about": {
+    "title": "About",
+    "subtitle": "Passionate about code, design and innovation",
+    "intro": "Fullstack developer and Junior CTO trained at HackerU, passionate about creating modern interfaces and memorable user experiences.",
+    "mindset": {
+      "title": "My Philosophy",
+      "items": {
+        "excellence": {
+          "title": "Technical Excellence",
+          "description": "Clean, typed, and tested code. TypeScript, best practices, and solid architecture are my fundamentals."
+        },
+        "passion": {
+          "title": "Creative Passion",
+          "description": "Fluid animations, modern interfaces, and memorable user experiences. Design is at the heart of my code."
+        },
+        "learning": {
+          "title": "Continuous Learning",
+          "description": "From HackerU to self-learning, I stay curious and up-to-date with the latest technologies: React, Next.js, AI."
+        },
+        "vision": {
+          "title": "CTO Vision",
+          "description": "Thinking architecture, scalability, and team. Transforming ideas into products that make a difference."
+        }
+      }
+    },
+    "bio": {
+      "title": "Who am I?",
+      "p1": "I am <strong class=\"text-violet-600 dark:text-violet-400\">Shay Acoca</strong>, fullstack developer, UX/UI designer, and Junior CTO. Originally from France, I discovered my passion for code in 2022 and decided to make a professional transition. My intensive training at <strong class=\"text-violet-600 dark:text-violet-400\">HackerU</strong> allowed me to master modern technologies: JavaScript, TypeScript, React, Node.js, and much more.",
+      "p2": "My passion goes beyond code. I am fascinated by <strong class=\"text-violet-600 dark:text-violet-400\">user experience</strong>, <strong class=\"text-violet-600 dark:text-violet-400\">fluid animations</strong>, and <strong class=\"text-violet-600 dark:text-violet-400\">technological innovation</strong>. Every project is an opportunity to push boundaries, explore new interactions, and create interfaces that leave a lasting impression.",
+      "p3": "My current ambitions: deepening my skills in <strong class=\"text-violet-600 dark:text-violet-400\">Artificial Intelligence</strong> (OpenAI API, LangChain, RAG), mastering <strong class=\"text-violet-600 dark:text-violet-400\">DevOps</strong> tools (Docker, CI/CD, Kubernetes), and developing my leadership in <strong class=\"text-violet-600 dark:text-violet-400\">technical collaboration</strong> to support product teams.",
+      "p4": "My vision of the <strong class=\"text-violet-600 dark:text-violet-400\">CTO</strong> role: being the bridge between business vision and technical excellence. Building scalable architectures, training passionate teams, and delivering products that make a difference. Clean code, accessibility, and user experience are the pillars of my philosophy."
+    },
+    "timeline": {
+      "title": "My Journey",
+      "items": {
+        "1": {
+          "title": "Junior CTO & Tech Specialization",
+          "description": "Designing the CTO Portfolio, specializing in React/Next.js/AI, and developing strategic product vision.",
+          "achievements": {
+            "0": "Next.js 14 App Router & Server Components Architecture",
+            "1": "AI Integration (OpenAI, LangChain) in real-world applications",
+            "2": "Focus on performance (Core Web Vitals) and SEO",
+            "3": "Active technology watch: RAG, AI Agents, Edge Computing"
+          }
+        },
+        "2": {
+          "title": "Open Source Project Creation",
+          "description": "Development and maintenance of UI libraries and components (OpticGlass, CardPro, FuturistCards).",
+          "achievements": {
+            "0": "OpticGlass: High-performance magnifier effect with complex event handling",
+            "1": "CardPro: Accessible component library (MIT License)",
+            "2": "FuturistCards: Advanced UI Design and 3D CSS animations",
+            "3": "Technical documentation and version control (Git/GitHub)"
+          }
+        },
+        "3": {
+          "title": "Fullstack Developer Training",
+          "description": "Intensive and structured training at HackerU: from 'vanilla' code to modern frameworks.",
+          "achievements": {
+            "0": "Mastering web fundamentals (HTML/CSS/JS)",
+            "1": "Backend Development (Node.js, Express, MongoDB)",
+            "2": "MVC Architecture and database design",
+            "3": "Agile methodologies and teamwork"
+          }
+        },
+        "4": {
+          "title": "Career Transition",
+          "description": "Discovering programming and deciding to switch careers to web development.",
+          "achievements": {
+            "0": "Discovering code via freeCodeCamp and online resources",
+            "1": "First projects: static sites, landing pages, JavaScript mini-games",
+            "2": "Decision to join HackerU for intensive training",
+            "3": "Building a daily learning routine"
+          }
+        }
+      }
+    },
+    "skills": {
+      "title": "Skills",
+      "subtitle": "Technologies and tools I master"
+    },
+    "downloadCV": "Download my resume"
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "Portfolio of my work",
+    "filters": {
+      "all": "All",
+      "react": "React",
+      "node": "Node.js",
+      "ecommerce": "E-commerce",
+      "ia": "AI",
+      "fullstack": "Fullstack",
+      "design": "Design"
+    },
+    "card": {
+      "viewProject": "View project",
+      "viewCode": "View on GitHub",
+      "liveDemo": "Access Demo"
+    },
+    "detail": {
+      "overview": "Overview",
+      "challenges": "Technical Challenges",
+      "solutions": "Solutions Provided",
+      "impact": "Result & Impact",
+      "stack": "Tech Stack",
+      "timeline": "Timeline",
+      "testimonial": "Client Testimonial",
+      "links": "Links"
+    },
+    "items": {
+      "food-recipe-app": {
+        "title": "Food — Recipe Application",
+        "description": "Recipe management application with responsive display and category sorting.",
+        "longDescription": "Complete web application for managing, organizing, and searching culinary recipes. Intuitive interface with category filtering system and responsive design adapted to all screens.",
+        "challenges": {
+          "1": "Creating a complete CRUD without a framework",
+          "2": "Real-time search and filtering system",
+          "3": "Optimized display performance"
+        },
+        "solutions": {
+          "1": "Clean and modular architecture",
+          "2": "Optimized filtering algorithm",
+          "3": "Lazy loading for images"
+        },
+        "impact": "A fluid and intuitive user experience for managing daily meals."
+      },
+      "optic-glass": {
+        "title": "OpticGlass — Eyewear E-commerce",
+        "description": "Interactive e-commerce site for eyewear with dynamic magnifier effect.",
+        "longDescription": "Immersive e-commerce experience offering detailed product visualization thanks to a custom-developed interactive magnifier effect. Cart and product catalog management.",
+        "challenges": {
+          "1": "Developing the magnifier effect without third-party libraries",
+          "2": "Precise handling of mouse/touch events",
+          "3": "Rendering performance on mobile"
+        },
+        "solutions": {
+          "1": "Using Canvas API for image processing",
+          "2": "Optimization via requestAnimationFrame",
+          "3": "Mobile-first responsive design"
+        },
+        "impact": "Increased engagement through product interactivity."
+      },
+      "futuristcards": {
+        "title": "FuturistCards — Digital Business Cards",
+        "description": "Digital business card generator with 3D animations and futuristic style.",
+        "longDescription": "Platform for creating interactive digital business cards. Uses advanced 3D CSS animations and glass effects (Glassmorphism) for a modern and impactful look.",
+        "challenges": {
+          "1": "High-performance 3D rendering in pure CSS",
+          "2": "Cross-browser compatibility of effects",
+          "3": "Intuitive editing interface"
+        },
+        "solutions": {
+          "1": "Using transform-style: preserve-3d",
+          "2": "CSS variables for dynamic customization",
+          "3": "Isolated React components"
+        },
+        "impact": "A modern solution for professional networking."
+      },
+      "cardpro-ui-library": {
+        "title": "CardPro — Card UI Library",
+        "description": "Library of modular UI components specialized in cards.",
+        "longDescription": "Open-source library of highly customizable and accessible card components. Designed to accelerate the development of consistent React interfaces.",
+        "challenges": {
+          "1": "Flexible component architecture (Compound Pattern)",
+          "2": "Strict accessibility management (A11y)",
+          "3": "Packaging and distribution via NPM"
+        },
+        "solutions": {
+          "1": "Using TypeScript for strong typing",
+          "2": "Complete documentation with Storybook",
+          "3": "Unit and visual tests"
+        },
+        "impact": "Accelerates UI development with reliable building blocks."
+      },
+      "portfolio-cto": {
+        "title": "CTO Portfolio",
+        "description": "Modern portfolio with Next.js 14, TypeScript, Framer Motion and multilingual system.",
+        "longDescription": "The showcase of my technical and creative know-how. This site is a concrete demonstration of Next.js App Router architecture, advanced SEO optimization, and integration of complex animations without compromising performance.",
+        "challenges": {
+          "1": "App Router architecture and Server Components",
+          "2": "SEO optimization and Core Web Vitals",
+          "3": "Fluid internationalization (FR/EN)"
+        },
+        "solutions": {
+          "1": "Modular structure by feature",
+          "2": "Dynamic metadata generation",
+          "3": "React Context for language management"
+        },
+        "impact": "A high-performance technological showcase demonstrating my CTO expertise."
+      },
+      "design-system-kit": {
+        "title": "Design System — React UI Kit",
+        "description": "Accessible React component library with complete documentation.",
+        "longDescription": "A complete ecosystem of React components documented via Storybook. This project defines the visual and interactive foundations for building consistent, maintainable, and scalable applications.",
+        "challenges": {
+          "1": "Creating 50+ atomic components",
+          "2": "Interactive documentation (Storybook)",
+          "3": "Visual and functional consistency"
+        },
+        "solutions": {
+          "1": "Using Radix UI for the base",
+          "2": "Advanced Storybook configuration",
+          "3": "Centralized design tokens"
+        },
+        "impact": "Accelerates new project development with a solid UI base."
+      }
+    }
+  },
+  "stack": {
+    "title": "My Stack",
+    "subtitle": "Technologies and tools I use daily",
+    "intro": {
+      "title": "My approach: efficiency and scalability",
+      "p1": "I prioritize a <strong class=\"text-violet-600 dark:text-violet-400\">modern and proven stack</strong> that allows for rapid delivery while ensuring long-term maintainability. My choice leans towards strongly typed and component-oriented technologies.",
+      "p2": "<strong class=\"text-violet-600 dark:text-violet-400\">Next.js and TypeScript</strong> form the backbone of my projects for their performance and robustness. I combine them with a modular product approach to create rich and fluid user experiences."
+    },
+    "categories": {
+      "frontend": {
+        "label": "Frontend",
+        "description": "React, Next.js, Framer Motion: for reactive, fluid, and aesthetic interfaces."
+      },
+      "backend": {
+        "label": "Backend",
+        "description": "Node.js, Python, FastAPI: for solid and high-performance server architectures."
+      },
+      "devops": {
+        "label": "DevOps",
+        "description": "Docker, Vercel, GitHub Actions: deployment automation and continuous integration."
+      },
+      "design": {
+        "label": "Design",
+        "description": "Figma, Illustrator: pixel-perfect mockup design and design systems."
+      },
+      "nocode": {
+        "label": "No-Code",
+        "description": "Webflow, Notion: rapid prototyping and efficient content management."
+      },
+      "other": {
+        "label": "AI / API",
+        "description": "OpenAI, LangChain: integrating artificial intelligence for innovative apps."
+      }
+    }
+  },
+  "videos": {
+    "title": "Video Gallery",
+    "subtitle": "Technical tutorials and demonstrations",
+    "watchVideo": "Watch video",
+    "duration": "Duration",
+    "items": {
+      "1": {
+        "title": "AI Dashboard",
+        "description": "Real-time data interface with AI insights. Complex data visualization and predictions."
+      },
+      "2": {
+        "title": "Headless E-commerce",
+        "description": "High-performance Shopify + Next.js solution. Optimized checkout funnel and SEO-friendly."
+      },
+      "3": {
+        "title": "AI Generator",
+        "description": "Application integrating GPT-4 and LangChain for contextual content generation."
+      },
+      "4": {
+        "title": "Design System",
+        "description": "Scalable UI Kit with over 50 components. Complete documentation and design tokens."
+      },
+      "5": {
+        "title": "Fintech Mobile App",
+        "description": "React Native application with payment handling and biometric security."
+      },
+      "6": {
+        "title": "Collaboration Tool",
+        "description": "Real-time collaborative tool using WebRTC and CRDT for simultaneous editing."
+      }
+    }
+  },
+  "cv": {
+    "title": "Resume",
+    "subtitle": "My complete professional journey",
+    "experience": "Professional Experience",
+    "education": "Education",
+    "certifications": "Certifications",
+    "skills": "Skills",
+    "downloadPDF": "Download PDF",
+    "hireMe": "Hire me",
+    "proposeProject": "Propose a project",
+    "current": "Current"
+  },
+  "github": {
+    "title": "Open Source",
+    "subtitle": "My contributions and public projects",
+    "stats": {
+      "repos": "Repositories",
+      "stars": "Stars",
+      "commits": "Commits",
+      "followers": "Followers"
+    },
+    "viewOnGitHub": "View on GitHub",
+    "badges": {
+      "cleanCode": "Clean Code",
+      "tested": "100% Tests",
+      "restful": "RESTful API"
+    },
+    "repos": {
+      "food": {
+        "description": "Recipe management app with responsive display and category sorting"
+      },
+      "opticglass": {
+        "description": "Dynamic magnifier effect on images with optimized cursor handling"
+      },
+      "futuristcards": {
+        "description": "Animated card components with fluid transitions and modern design system"
+      },
+      "cardpro": {
+        "description": "Modular and accessible UI card library under MIT license"
+      },
+      "portfolio-cto": {
+        "description": "Modern portfolio with Next.js 14, TypeScript, Framer Motion and multilingual system"
+      },
+      "design-system": {
+        "description": "Accessible React component library with complete documentation"
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Let's discuss your project",
+    "form": {
+      "name": "Full name",
+      "email": "Email",
+      "company": "Company (optional)",
+      "type": "Request type",
+      "types": {
+        "recruitment": "Recruitment",
+        "collaboration": "Partnership",
+        "freelance": "Freelance",
+        "other": "Other"
+      },
+      "placeholders": {
+        "recruitment": "Hi Shay,\n\nWe are looking for a fullstack developer / junior CTO to join our team. Your profile particularly interests us.\n\nCan we discuss this opportunity?",
+        "collaboration": "Hi Shay,\n\nI represent [Company] and we would be interested in a technical partnership regarding [Topic].\n\nLet's talk about it!",
+        "freelance": "Hi Shay,\n\nWe need a React/Next.js expert for a [Duration] mission. The project involves [Description].\n\nWhat is your availability?",
+        "other": "Hi Shay,\n\nI am contacting you regarding [Reason].\n\n[Your message here]",
+        "default": "Describe your project or request..."
+      },
+      "message": "Your message",
+      "file": "Attachment (optional)",
+      "filePlaceholder": "Drag a file here",
+      "fileTypes": "PDF, DOC, DOCX (max 10MB)",
+      "submit": "Send message",
+      "success": "Message sent successfully!",
+      "error": "Error sending message. Please try again."
+    },
+    "info": {
+      "email": "Email",
+      "location": "Location",
+      "availability": "Availability",
+      "availableNow": "Available for new opportunities"
+    }
+  },
+  "footer": {
+    "rights": "All rights reserved",
+    "madeWith": "Made with",
+    "and": "and",
+    "builtWith": "Built with Next.js 14 and Tailwind CSS"
+  },
+  "theme": {
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
+  "language": {
+    "fr": "Français",
+    "en": "English"
+  },
+  "seo": {
+    "home": {
+      "title": "Shay Acoca - Junior CTO & Fullstack Developer | Portfolio",
+      "description": "Fullstack developer trained at HackerU, specialized in React, Next.js, TypeScript and CSS animations. Discover my open-source projects and skills."
+    },
+    "about": {
+      "title": "About Shay Acoca - Junior CTO & Fullstack Developer",
+      "description": "Discover my journey at HackerU, my passion for code and design, and my vision of the CTO role."
+    },
+    "projects": {
+      "title": "Projects - Shay Acoca | food, OpticGlass, FuturistCards, CardPro",
+      "description": "Explore my open-source projects: web applications, animated UI components, accessible libraries and more."
+    },
+    "contact": {
+      "title": "Contact - Shay Acoca | Recruitment, Freelance, Partnership",
+      "description": "Contact me to discuss a recruitment opportunity, freelance mission or technical collaboration."
+    },
+    "stack": {
+      "title": "Tech Stack - Shay Acoca | React, Next.js, Node.js, AI",
+      "description": "My tech stack: React, Next.js, TypeScript, Node.js, Tailwind CSS, Framer Motion and AI tools."
+    },
+    "cv": {
+      "title": "Resume - Shay Acoca | Junior CTO & Fullstack Developer",
+      "description": "Download my resume: HackerU training, open-source projects, technical skills and certifications."
+    },
+    "github": {
+      "title": "GitHub - Shay Acoca | Open Source Projects",
+      "description": "Discover my GitHub repositories: food, OpticGlass, FuturistCards, CardPro and more."
+    },
+    "videos": {
+      "title": "Video Tutorials - Shay Acoca | AI Dashboard, E-commerce, Design",
+      "description": "Web development video tutorials: AI Dashboard, Headless E-commerce, AI Generator, Design System."
+    }
+  }
+}

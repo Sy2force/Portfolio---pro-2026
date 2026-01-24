@@ -1,0 +1,78 @@
+import { GitHubRepo, GitHubStats } from "@/types";
+
+export const githubRepos: GitHubRepo[] = [
+  {
+    id: 1,
+    name: "food",
+    description: "Application de gestion de recettes avec affichage responsive et tri par catégorie",
+    html_url: "https://github.com/shayacoca/food",
+    stargazers_count: 12,
+    forks_count: 3,
+    language: "JavaScript",
+    topics: ["javascript", "responsive", "recipes", "css"],
+    updated_at: "2024-01-15",
+  },
+  {
+    id: 2,
+    name: "OpticGlass",
+    description: "Effet de loupe dynamique sur image avec gestion optimisée du curseur et animations fluides",
+    html_url: "https://github.com/shayacoca/OpticGlass",
+    stargazers_count: 8,
+    forks_count: 2,
+    language: "JavaScript",
+    topics: ["javascript", "animation", "cursor", "magnifier"],
+    updated_at: "2024-01-10",
+  },
+  {
+    id: 3,
+    name: "FuturistCards",
+    description: "Composants de cartes animées avec transitions fluides et design system moderne",
+    html_url: "https://github.com/shayacoca/FuturistCards",
+    stargazers_count: 15,
+    forks_count: 5,
+    language: "JavaScript",
+    topics: ["javascript", "css", "animations", "cards", "ui"],
+    updated_at: "2024-01-08",
+  },
+  {
+    id: 4,
+    name: "CardPro",
+    description: "Librairie de cartes UI modulaire et accessible sous licence MIT",
+    html_url: "https://github.com/shayacoca/CardPro",
+    stargazers_count: 22,
+    forks_count: 7,
+    language: "JavaScript",
+    topics: ["javascript", "ui-library", "accessibility", "mit-license"],
+    updated_at: "2024-01-05",
+  },
+  {
+    id: 5,
+    name: "portfolio-cto",
+    description: "Portfolio moderne avec Next.js 14, TypeScript, Framer Motion et système multilingue",
+    html_url: "https://github.com/shayacoca/portfolio-cto",
+    stargazers_count: 18,
+    forks_count: 4,
+    language: "TypeScript",
+    topics: ["nextjs", "typescript", "tailwindcss", "framer-motion"],
+    updated_at: "2024-01-20",
+  },
+  {
+    id: 6,
+    name: "design-system",
+    description: "Bibliothèque de composants React accessible avec documentation complète",
+    html_url: "https://github.com/shayacoca/design-system",
+    stargazers_count: 10,
+    forks_count: 2,
+    language: "TypeScript",
+    topics: ["react", "typescript", "storybook", "radix-ui"],
+    updated_at: "2023-12-28",
+  },
+];
+
+export const githubStats: GitHubStats = {
+  public_repos: 12,
+  followers: 45,
+  following: 120,
+  total_stars: 85,
+  total_commits: 2500
+};
