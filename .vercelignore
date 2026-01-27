@@ -1,0 +1,8 @@
+backend/
+docs/
+.git/
+.github/
+*.md
+!README.md
+.env.example
+render.yaml
