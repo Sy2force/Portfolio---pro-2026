@@ -113,34 +113,22 @@ function SkillsSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: catIndex * 0.1 }}
-            className="bg-white dark:bg-gray-800 rounded-2xl p-6 border border-gray-200 dark:border-gray-700"
+            className="bg-white dark:bg-gray-800 rounded-2xl p-6 border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-shadow duration-300"
           >
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
+            <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-3">
+              <span className={`w-2 h-8 rounded-full bg-gradient-to-b from-${category.color || 'violet'}-500 to-${category.color || 'indigo'}-600`}></span>
               {t(`stack.categories.${category.id}`)}
             </h3>
-            <div className="space-y-4">
+            <div className="flex flex-wrap gap-2">
               {skills
                 .filter((s) => s.category === category.id)
-                .slice(0, 5)
+                .slice(0, 6)
                 .map((skill) => (
-                  <div key={skill.name} className="group">
-                    <div className="flex items-center justify-between mb-1">
-                      <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
-                        {skill.name}
-                      </span>
-                      <span className="text-xs text-gray-500 dark:text-gray-400">
-                        {skill.level}%
-                      </span>
-                    </div>
-                    <div className="h-2 bg-gray-100 dark:bg-gray-700 rounded-full overflow-hidden">
-                      <motion.div
-                        initial={{ width: 0 }}
-                        animate={isInView ? { width: `${skill.level}%` } : {}}
-                        transition={{ duration: 1, delay: catIndex * 0.1 }}
-                        className="h-full rounded-full"
-                        style={{ backgroundColor: skill.color || "#8b5cf6" }}
-                      />
-                    </div>
+                  <div 
+                    key={skill.name} 
+                    className="px-3 py-1.5 rounded-lg bg-gray-50 dark:bg-gray-700/50 text-sm font-medium text-gray-700 dark:text-gray-200 border border-gray-100 dark:border-gray-600 hover:bg-violet-50 dark:hover:bg-violet-900/20 hover:text-violet-700 dark:hover:text-violet-300 hover:border-violet-200 dark:hover:border-violet-800 transition-colors cursor-default"
+                  >
+                    {skill.name}
                   </div>
                 ))}
             </div>

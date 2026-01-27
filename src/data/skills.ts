@@ -51,10 +51,10 @@ export const getSkillsByCategory = (category: Skill["category"]): Skill[] => {
 };
 
 export const skillCategories = [
-  { id: "frontend", label: "Frontend", icon: "Monitor", description: "React, Next.js et TypeScript sont mes outils de prédilection. J'aime créer des interfaces fluides avec Tailwind CSS et Framer Motion pour des animations qui marquent." },
-  { id: "backend", label: "Backend", icon: "Server", description: "Node.js et Express pour des APIs robustes. MongoDB et PostgreSQL pour la persistance. J'apprends continuellement Python et FastAPI pour élargir mes compétences." },
-  { id: "devops", label: "DevOps", icon: "Cloud", description: "Vercel pour le déploiement rapide, Docker pour la containerisation, GitHub Actions pour l'automatisation. Je construis des pipelines CI/CD efficaces." },
-  { id: "design", label: "Design", icon: "Palette", description: "Figma est mon outil principal pour le prototypage. Je crée des maquettes pixel-perfect et des design systems cohérents avant de coder." },
-  { id: "nocode", label: "No-Code", icon: "Blocks", description: "Webflow et Shopify pour des projets rapides. Notion et Airtable pour l'organisation. Le no-code accélère le prototypage et la validation d'idées." },
-  { id: "other", label: "Autres", icon: "Sparkles", description: "OpenAI API et LangChain pour intégrer l'IA. Stripe pour les paiements. Git pour le versioning. Ces outils complètent ma stack au quotidien." },
+  { id: "frontend", label: "Frontend", icon: "Monitor", description: "React, Next.js et TypeScript sont mes outils de prédilection. J'aime créer des interfaces fluides avec Tailwind CSS et Framer Motion pour des animations qui marquent.", color: "violet" },
+  { id: "backend", label: "Backend", icon: "Server", description: "Node.js et Express pour des APIs robustes. MongoDB et PostgreSQL pour la persistance. J'apprends continuellement Python et FastAPI pour élargir mes compétences.", color: "emerald" },
+  { id: "devops", label: "DevOps", icon: "Cloud", description: "Vercel pour le déploiement rapide, Docker pour la containerisation, GitHub Actions pour l'automatisation. Je construis des pipelines CI/CD efficaces.", color: "blue" },
+  { id: "design", label: "Design", icon: "Palette", description: "Figma est mon outil principal pour le prototypage. Je crée des maquettes pixel-perfect et des design systems cohérents avant de coder.", color: "pink" },
+  { id: "nocode", label: "No-Code", icon: "Blocks", description: "Webflow et Shopify pour des projets rapides. Notion et Airtable pour l'organisation. Le no-code accélère le prototypage et la validation d'idées.", color: "orange" },
+  { id: "other", label: "Autres", icon: "Sparkles", description: "OpenAI API et LangChain pour intégrer l'IA. Stripe pour les paiements. Git pour le versioning. Ces outils complètent ma stack au quotidien.", color: "indigo" },
 ] as const;

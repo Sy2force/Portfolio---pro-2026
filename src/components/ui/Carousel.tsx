@@ -22,21 +22,25 @@ export function Carousel({
 }: CarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
 
   const slideVariants = {
     enter: (direction: number) => ({
-      x: direction > 0 ? 1000 : -1000,
+      x: direction > 0 ? "100%" : "-100%",
       opacity: 0,
+      scale: 0.95,
     }),
     center: {
       zIndex: 1,
       x: 0,
       opacity: 1,
+      scale: 1,
     },
     exit: (direction: number) => ({
       zIndex: 0,
-      x: direction < 0 ? 1000 : -1000,
+      x: direction < 0 ? "100%" : "-100%",
       opacity: 0,
+      scale: 0.95,
     }),
   };
 
@@ -56,70 +60,80 @@ export function Carousel({
   }, [children.length]);
 
   useEffect(() => {
-    if (!autoPlay) return;
+    if (!autoPlay || isHovered) return;
 
     const timer = setInterval(() => {
       paginate(1);
     }, interval);
 
     return () => clearInterval(timer);
-  }, [autoPlay, interval, paginate]);
+  }, [autoPlay, interval, paginate, isHovered]);
 
   return (
-    <div className={cn("relative overflow-hidden", className)}>
-      <AnimatePresence initial={false} custom={direction}>
-        <motion.div
-          key={currentIndex}
-          custom={direction}
-          variants={slideVariants}
-          initial="enter"
-          animate="center"
-          exit="exit"
-          transition={{
-            x: { type: "spring", stiffness: 300, damping: 30 },
-            opacity: { duration: 0.2 },
-          }}
-          drag="x"
-          dragConstraints={{ left: 0, right: 0 }}
-          dragElastic={1}
-          onDragEnd={(_, { offset, velocity }) => {
-            const swipe = swipePower(offset.x, velocity.x);
+    <div 
+      className={cn("relative group", className)}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <div className="relative overflow-hidden rounded-3xl">
+        <div className="grid grid-cols-1 grid-rows-1">
+          <AnimatePresence initial={false} custom={direction} mode="popLayout">
+            <motion.div
+              key={currentIndex}
+              custom={direction}
+              variants={slideVariants}
+              initial="enter"
+              animate="center"
+              exit="exit"
+              transition={{
+                x: { type: "spring", stiffness: 300, damping: 30 },
+                opacity: { duration: 0.4 },
+                scale: { duration: 0.4 },
+              }}
+              style={{ gridArea: "1/1" }}
+              drag="x"
+              dragConstraints={{ left: 0, right: 0 }}
+              dragElastic={1}
+              onDragEnd={(_, { offset, velocity }) => {
+                const swipe = swipePower(offset.x, velocity.x);
 
-            if (swipe < -swipeConfidenceThreshold) {
-              paginate(1);
-            } else if (swipe > swipeConfidenceThreshold) {
-              paginate(-1);
-            }
-          }}
-          className="w-full"
-        >
-          {children[currentIndex]}
-        </motion.div>
-      </AnimatePresence>
+                if (swipe < -swipeConfidenceThreshold) {
+                  paginate(1);
+                } else if (swipe > swipeConfidenceThreshold) {
+                  paginate(-1);
+                }
+              }}
+              className="w-full touch-pan-y"
+            >
+              {children[currentIndex]}
+            </motion.div>
+          </AnimatePresence>
+        </div>
 
-      {/* Navigation Arrows */}
-      {showArrows && children.length > 1 && (
-        <>
-          <button
-            onClick={() => paginate(-1)}
-            className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm p-3 rounded-full shadow-luxury hover:shadow-glow transition-all duration-300 hover:scale-110"
-            aria-label="Previous slide"
-          >
-            <ChevronLeft className="w-6 h-6 text-gray-900 dark:text-white" />
-          </button>
-          <button
-            onClick={() => paginate(1)}
-            className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm p-3 rounded-full shadow-luxury hover:shadow-glow transition-all duration-300 hover:scale-110"
-            aria-label="Next slide"
-          >
-            <ChevronRight className="w-6 h-6 text-gray-900 dark:text-white" />
-          </button>
-        </>
-      )}
+        {/* Navigation Arrows */}
+        {showArrows && children.length > 1 && (
+          <>
+            <button
+              onClick={() => paginate(-1)}
+              className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md p-3 rounded-full shadow-lg border border-white/20 dark:border-gray-700/50 text-gray-800 dark:text-gray-200 opacity-0 group-hover:opacity-100 transition-all duration-300 hover:scale-110 focus:opacity-100 active:scale-95 disabled:opacity-0"
+              aria-label="Previous slide"
+            >
+              <ChevronLeft className="w-6 h-6" />
+            </button>
+            <button
+              onClick={() => paginate(1)}
+              className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md p-3 rounded-full shadow-lg border border-white/20 dark:border-gray-700/50 text-gray-800 dark:text-gray-200 opacity-0 group-hover:opacity-100 transition-all duration-300 hover:scale-110 focus:opacity-100 active:scale-95 disabled:opacity-0"
+              aria-label="Next slide"
+            >
+              <ChevronRight className="w-6 h-6" />
+            </button>
+          </>
+        )}
+      </div>
 
       {/* Dots Indicator */}
       {showDots && children.length > 1 && (
-        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 flex gap-2">
+        <div className="flex justify-center gap-3 mt-8">
           {children.map((_, index) => (
             <button
               key={index}
@@ -128,10 +142,10 @@ export function Carousel({
                 setCurrentIndex(index);
               }}
               className={cn(
-                "h-2 rounded-full transition-all duration-300",
+                "h-2.5 rounded-full transition-all duration-500",
                 index === currentIndex
-                  ? "w-8 bg-gradient-to-r from-violet-600 to-indigo-600 shadow-glow"
-                  : "w-2 bg-gray-300 dark:bg-gray-600 hover:bg-gray-400 dark:hover:bg-gray-500"
+                  ? "w-10 bg-gradient-to-r from-violet-600 to-indigo-600 shadow-md scale-100"
+                  : "w-2.5 bg-gray-300 dark:bg-gray-700 hover:bg-gray-400 dark:hover:bg-gray-600 hover:scale-110"
               )}
               aria-label={`Go to slide ${index + 1}`}
             />

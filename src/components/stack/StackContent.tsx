@@ -128,49 +128,64 @@ export default function StackContent() {
                   </p>
                 </div>
 
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
                   {categorySkills.map((skill, index) => (
                     <motion.div
                       key={skill.name}
-                      initial={{ opacity: 0, scale: 0.8 }}
+                      initial={{ opacity: 0, scale: 0.9 }}
                       animate={isInView ? { opacity: 1, scale: 1 } : {}}
                       transition={{ delay: catIndex * 0.1 + index * 0.05 }}
-                      whileHover={{ y: -4, scale: 1.02 }}
-                      className="group relative bg-white dark:bg-gray-800 rounded-2xl p-4 border border-gray-200 dark:border-gray-700 hover:border-violet-300 dark:hover:border-violet-700 transition-all cursor-pointer"
+                      whileHover={{ y: -5, scale: 1.02 }}
+                      className="group relative bg-white dark:bg-gray-800 rounded-2xl p-6 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden"
+                      style={{
+                        borderColor: "transparent",
+                      }}
                     >
-                      {/* Skill Icon Placeholder */}
-                      <div
-                        className="w-12 h-12 rounded-xl mb-3 flex items-center justify-center mx-auto"
-                        style={{ backgroundColor: `${skill.color}20` }}
-                      >
-                        <span
-                          className="text-xl font-bold"
-                          style={{ color: skill.color }}
+                      {/* Hover Gradient Border Effect */}
+                      <div 
+                        className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+                        style={{
+                          background: `linear-gradient(135deg, ${skill.color}20 0%, transparent 100%)`
+                        }}
+                      />
+                      <div 
+                        className="absolute bottom-0 left-0 right-0 h-1 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"
+                        style={{ backgroundColor: skill.color }}
+                      />
+
+                      {/* Content */}
+                      <div className="relative z-10 flex flex-col items-center">
+                        <div
+                          className="w-16 h-16 rounded-2xl mb-4 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shadow-inner"
+                          style={{ 
+                            backgroundColor: `${skill.color}10`,
+                            color: skill.color 
+                          }}
                         >
-                          {skill.name.charAt(0)}
-                        </span>
-                      </div>
+                          <span className="text-3xl font-bold">
+                            {skill.name.charAt(0)}
+                          </span>
+                        </div>
 
-                      {/* Skill Name */}
-                      <h3 className="text-sm font-medium text-gray-900 dark:text-white text-center mb-2">
-                        {skill.name}
-                      </h3>
-
-                      {/* Progress Bar */}
-                      <div className="h-1.5 bg-gray-100 dark:bg-gray-700 rounded-full overflow-hidden">
-                        <motion.div
-                          initial={{ width: 0 }}
-                          animate={isInView ? { width: `${skill.level}%` } : {}}
-                          transition={{ duration: 1, delay: catIndex * 0.1 + index * 0.05 }}
-                          className="h-full rounded-full"
-                          style={{ backgroundColor: skill.color }}
-                        />
-                      </div>
-
-                      {/* Tooltip */}
-                      <div className="absolute -top-12 left-1/2 -translate-x-1/2 px-3 py-1.5 bg-gray-900 dark:bg-white text-white dark:text-gray-900 text-xs font-medium rounded-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap">
-                        {skill.level}% maîtrise
-                        <div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-gray-900 dark:border-t-white" />
+                        <h3 className="text-base font-bold text-gray-900 dark:text-white text-center mb-1">
+                          {skill.name}
+                        </h3>
+                        
+                        <div className="flex items-center gap-1">
+                           <div className="flex gap-0.5">
+                             {[...Array(5)].map((_, i) => (
+                               <div 
+                                 key={i}
+                                 className={`w-1.5 h-1.5 rounded-full ${
+                                   i < Math.round(skill.level / 20) 
+                                     ? "opacity-100" 
+                                     : "opacity-20"
+                                 }`}
+                                 style={{ backgroundColor: skill.color }}
+                               />
+                             ))}
+                           </div>
+                        </div>
                       </div>
                     </motion.div>
                   ))}
