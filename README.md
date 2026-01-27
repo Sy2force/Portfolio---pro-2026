@@ -1,145 +1,103 @@
-# Portfolio CTO - Ultra-Premium Developer Portfolio
+# Portfolio CTO - Architecture & Documentation
 
-Un portfolio web moderne, immersif et professionnel conçu pour valoriser un profil de CTO créatif, développeur fullstack et designer UX/UI.
+> **Vision:** Un portfolio performant, accessible et maintenable démontrant une expertise technique Fullstack & CTO Junior.
 
-![Next.js](https://img.shields.io/badge/Next.js-14-black?style=flat-square&logo=next.js)
-![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=flat-square&logo=typescript)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind-3-38B2AC?style=flat-square&logo=tailwind-css)
-![Framer Motion](https://img.shields.io/badge/Framer_Motion-11-FF0055?style=flat-square&logo=framer)
-![Three.js](https://img.shields.io/badge/Three.js-WebGL-black?style=flat-square&logo=three.js)
+![React](https://img.shields.io/badge/React-18.2-61DAFB?style=for-the-badge&logo=react)
+![Vite](https://img.shields.io/badge/Vite-5.0-646CFF?style=for-the-badge&logo=vite)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=for-the-badge&logo=typescript)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-38B2AC?style=for-the-badge&logo=tailwind-css)
+![Framer Motion](https://img.shields.io/badge/Framer_Motion-11.0-FF0055?style=for-the-badge&logo=framer)
 
-## ✨ Fonctionnalités
+## 🏗 Architecture Technique
 
-- **Hero immersif** avec fond WebGL 3D animé (Three.js)
-- **Animations fluides** avec Framer Motion et GSAP
-- **Thème clair/sombre** automatique avec next-themes
-- **Multilingue** FR/EN avec système i18n custom
-- **SEO optimisé** avec métadonnées Open Graph et Schema.org
-- **PWA Ready** - installable comme application
-- **Accessibilité** ARIA complète et navigation clavier
-- **Responsive** - design mobile-first
+Ce projet est une **Single Page Application (SPA)** moderne construite avec React et Vite.
 
-## 📄 Pages
+### Choix Technologiques
 
-| Page | Description |
-|------|-------------|
-| `/` | Landing immersive avec hero 3D et projets récents |
-| `/about` | Présentation, timeline, compétences, CV téléchargeable |
-| `/projects` | Showcase de projets avec filtres par stack |
-| `/projects/[slug]` | Détail d'un projet avec challenges et solutions |
-| `/stack` | Visualisation interactive des technologies |
-| `/videos` | Galerie de démonstrations et micro-interactions |
-| `/cv` | CV interactif complet avec téléchargement PDF |
-| `/contact` | Formulaire de contact avancé |
-| `/github` | Statistiques GitHub et repositories publics |
+| Technologie | Usage | Justification CTO |
+|-------------|-------|-------------------|
+| **React 18** | Library | Composants réutilisables, écosystème mature, performance optimale. |
+| **Vite** | Build Tool | Build ultra-rapide, HMR instantané, optimisation automatique. |
+| **React Router DOM** | Routing | Navigation SPA fluide, gestion d'état d'URL, code splitting. |
+| **TypeScript** | Langage | Typage strict pour réduire la dette technique et faciliter la maintenance. |
+| **Tailwind CSS** | Styling | Utility-first pour une itération rapide et un bundle CSS minimal. |
+| **Framer Motion** | Animation | Animations déclaratives fluides (60fps) et gestion des gestures complexe. |
+| **Radix UI** | Composants | Primitives accessibles (headless UI) pour garantir la conformité WCAG. |
+| **Zod** | Validation | Validation de schémas runtime (formulaires contact) pour la robustesse des données. |
 
-## 🛠️ Stack Technique
-
-### Frontend
-- **Framework:** Next.js 14 (App Router)
-- **Language:** TypeScript
-- **Styling:** Tailwind CSS
-- **Animations:** Framer Motion, GSAP
-- **3D:** Three.js, React Three Fiber
-- **UI Components:** Radix UI, Lucide Icons
-
-### Fonctionnalités
-- **Forms:** React Hook Form + Zod
-- **Theming:** next-themes
-- **i18n:** Système custom avec JSON
-
-## 🚀 Installation
+### Structure du Projet
 
 ```bash
-# Cloner le repository
-git clone https://github.com/yourusername/portfolio-cto.git
-cd portfolio-cto
-
-# Installer les dépendances
-npm install --legacy-peer-deps
-
-# Lancer le serveur de développement
-npm run dev
-```
-
-Ouvrir [http://localhost:3000](http://localhost:3000) dans votre navigateur.
-
-## 📁 Structure du Projet
-
-```
 src/
-├── app/                    # Pages Next.js (App Router)
-│   ├── about/
-│   ├── contact/
-│   ├── cv/
-│   ├── github/
-│   ├── projects/
-│   ├── stack/
-│   ├── videos/
-│   ├── layout.tsx
-│   └── page.tsx
-├── components/
-│   ├── home/              # Composants page d'accueil
-│   ├── layout/            # Navbar, Footer, Loader
-│   ├── projects/          # Cartes et détails projets
-│   ├── providers/         # Theme, Language providers
-│   ├── three/             # Composants Three.js
-│   └── ui/                # Composants UI réutilisables
-├── context/               # React Context (Language)
-├── data/                  # Données statiques (projets, skills...)
-├── hooks/                 # Custom hooks
-├── i18n/                  # Traductions FR/EN
-├── lib/                   # Utilitaires
-└── types/                 # Types TypeScript
+├── pages/                # Pages de l'application (Home, About, Projects...)
+├── components/           # Composants React
+│   ├── ui/               # Primitives design system (Boutons, Cards...)
+│   ├── layout/           # Structure globale (Navbar, Footer...)
+│   ├── home/             # Composants page d'accueil
+│   ├── projects/         # Composants projets
+│   └── [feature]/        # Composants liés à une feature spécifique
+├── hooks/                # Custom Hooks (logique réutilisable)
+├── lib/                  # Utilitaires purs (helpers, formatters)
+├── data/                 # Single Source of Truth (Données statiques)
+├── context/              # React Context (Language, Theme)
+└── i18n/                 # Dictionnaires de traduction (fr.json, en.json)
 ```
 
-## 🎨 Personnalisation
+## 🚀 Fonctionnalités Clés
 
-### Modifier vos informations
-1. **Données personnelles:** `src/data/navigation.ts` (siteConfig)
-2. **Projets:** `src/data/projects.ts`
-3. **Compétences:** `src/data/skills.ts`
-4. **Expériences:** `src/data/experience.ts`
-5. **Vidéos:** `src/data/videos.ts`
+1.  **Routing SPA**
+    *   React Router DOM pour une navigation fluide sans rechargement.
+    *   Routes dynamiques pour les détails de projets.
 
-### Modifier les traductions
-- Français: `src/i18n/messages/fr.json`
-- Anglais: `src/i18n/messages/en.json`
+2.  **Performance**
+    *   Build optimisé avec Vite (code splitting, tree shaking).
+    *   Lazy loading des composants lourds.
+    *   Images optimisées avec attributs `loading="lazy"`.
 
-### Modifier les couleurs
-- Variables CSS: `src/app/globals.css`
-- Config Tailwind: `tailwind.config.ts`
+3.  **Internationalisation (i18n)**
+    *   Système léger basé sur React Context.
+    *   Contenu séparé (`fr.json`, `en.json`) pour faciliter l'édition.
+    *   Persistance de la langue dans localStorage.
 
-## 🚀 Déploiement sur Vercel
+4.  **Accessibilité (A11y)**
+    *   Navigation au clavier complète.
+    *   Gestion du focus et attributs ARIA via Radix UI.
+    *   Contraste des couleurs vérifié.
+
+5.  **Dark Mode**
+    *   Thème sombre/clair avec next-themes.
+    *   Persistance des préférences utilisateur.
+
+## 🛠 Installation & Développement
 
 ```bash
+# Installation
+npm install
+
+# Serveur de dev (http://localhost:5173)
+npm run dev
+
+# Linting & Type checking
+npm run lint
+
 # Build de production
 npm run build
 
-# Ou déployer directement
-npx vercel
+# Preview du build
+npm run preview
 ```
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/yourusername/portfolio-cto)
+## 📦 Scripts de Maintenance
 
-## 📝 Scripts Disponibles
+- **Audit Accessibilité :** Voir `docs/A11Y_CHECKLIST.md`
+- **Plan de Maintenance :** Voir `docs/MAINTENANCE_PLAN.md`
 
-```bash
-npm run dev      # Serveur de développement
-npm run build    # Build de production
-npm run start    # Serveur de production
-npm run lint     # Linter ESLint
-```
+## 🤝 Contribution & Standards
 
-## 🔧 Configuration Requise
-
-- Node.js 18+
-- npm 9+
-
-## 📄 License
-
-MIT License - Libre d'utilisation et de modification.
+- **Commits :** Conventionnal Commits (`feat:`, `fix:`, `chore:`, `docs:`).
+- **Style :** Prettier + ESLint configurés. Pas de `any` explicite autorisé.
+- **Review :** Chaque PR doit passer le build et le lint.
 
 ---
 
-Créé avec ❤️ et ☕ par [Votre Nom](https://github.com/yourusername)
+*Développé par [Shay Acoca](https://github.com/shayacoca). Code source sous licence MIT.*

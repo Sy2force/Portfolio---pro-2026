@@ -1,9 +1,8 @@
-"use client";
 
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Github, Star, GitFork, Code, Users, ExternalLink, Activity, CheckCircle } from "lucide-react";
-import { useTranslation } from "@/context/LanguageContext";
+import { useTranslation } from "@/hooks/useTranslation";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
 import { githubRepos, githubStats } from "@/data/github";

@@ -36,7 +36,7 @@
     "hero": {
       "greeting": "Hi, I'm",
       "name": "Shay Acoca",
-      "title": "Junior CTO. Fullstack Developer. HackerU Graduate.",
+      "title": "Junior CTO. Fullstack Developer.",
       "subtitle": "I create modern interfaces and memorable user experiences.",
       "cta": "Discover my universe",
       "ctaSecondary": "View my projects"
@@ -137,34 +137,34 @@
   "about": {
     "title": "About",
     "subtitle": "Passionate about code, design and innovation",
-    "intro": "Fullstack developer and Junior CTO trained at HackerU, passionate about creating modern interfaces and memorable user experiences.",
+    "intro": "Founder of Acoca Digital Services based in Israel. Full Stack & Digital Marketing Expert. I turn the vision of freelancers and SMEs into high-performance, tailored digital solutions.",
     "mindset": {
       "title": "My Philosophy",
       "items": {
         "excellence": {
-          "title": "Technical Excellence",
-          "description": "Clean, typed, and tested code. TypeScript, best practices, and solid architecture are my fundamentals."
+          "title": "Excellence & Rigor",
+          "description": "Veteran of the Givati Unit, I apply military discipline to code quality and deadline respect."
         },
         "passion": {
-          "title": "Creative Passion",
-          "description": "Fluid animations, modern interfaces, and memorable user experiences. Design is at the heart of my code."
+          "title": "Digital Impact",
+          "description": "Creating fast, responsive websites connected to modern market needs to maximize your visibility."
         },
         "learning": {
-          "title": "Continuous Learning",
-          "description": "From HackerU to self-learning, I stay curious and up-to-date with the latest technologies: React, Next.js, AI."
+          "title": "360° Expertise",
+          "description": "From Digital Marketing to Full Stack Development (2024-2026), I master the entire digital value chain."
         },
         "vision": {
-          "title": "CTO Vision",
-          "description": "Thinking architecture, scalability, and team. Transforming ideas into products that make a difference."
+          "title": "Trusted Partner",
+          "description": "Supporting creators and SMEs, in Israel and internationally, with accessible and premium solutions."
         }
       }
     },
     "bio": {
       "title": "Who am I?",
-      "p1": "I am <strong class=\"text-violet-600 dark:text-violet-400\">Shay Acoca</strong>, fullstack developer, UX/UI designer, and Junior CTO. Originally from France, I discovered my passion for code in 2022 and decided to make a professional transition. My intensive training at <strong class=\"text-violet-600 dark:text-violet-400\">HackerU</strong> allowed me to master modern technologies: JavaScript, TypeScript, React, Node.js, and much more.",
-      "p2": "My passion goes beyond code. I am fascinated by <strong class=\"text-violet-600 dark:text-violet-400\">user experience</strong>, <strong class=\"text-violet-600 dark:text-violet-400\">fluid animations</strong>, and <strong class=\"text-violet-600 dark:text-violet-400\">technological innovation</strong>. Every project is an opportunity to push boundaries, explore new interactions, and create interfaces that leave a lasting impression.",
-      "p3": "My current ambitions: deepening my skills in <strong class=\"text-violet-600 dark:text-violet-400\">Artificial Intelligence</strong> (OpenAI API, LangChain, RAG), mastering <strong class=\"text-violet-600 dark:text-violet-400\">DevOps</strong> tools (Docker, CI/CD, Kubernetes), and developing my leadership in <strong class=\"text-violet-600 dark:text-violet-400\">technical collaboration</strong> to support product teams.",
-      "p4": "My vision of the <strong class=\"text-violet-600 dark:text-violet-400\">CTO</strong> role: being the bridge between business vision and technical excellence. Building scalable architectures, training passionate teams, and delivering products that make a difference. Clean code, accessibility, and user experience are the pillars of my philosophy."
+      "p1": "I am <strong class=\"text-violet-600 dark:text-violet-400\">Shay Acoca</strong>, founder of <strong class=\"text-violet-600 dark:text-violet-400\">Acoca Digital Services</strong>. Based in Israel, I combine dual expertise in <strong class=\"text-violet-600 dark:text-violet-400\">Digital Marketing</strong> and <strong class=\"text-violet-600 dark:text-violet-400\">Full Stack Web Development</strong> (2024-2026 training). My mission is clear: to offer exceptional digital services to freelancers, SMEs, and ambitious creators.",
+      "p2": "My journey is forged by commitment. After a full service in the elite <strong class=\"text-violet-600 dark:text-violet-400\">Givati</strong> unit of the Israeli Army (2019-2022), I kept this iron discipline, team spirit, and resilience to apply them to the tech world. I don't just deliver a site; I fully commit to your project's success.",
+      "p3": "Today, through my agency, I develop ultra-performing <strong class=\"text-violet-600 dark:text-violet-400\">showcase sites</strong>, <strong class=\"text-violet-600 dark:text-violet-400\">e-commerce</strong>, and <strong class=\"text-violet-600 dark:text-violet-400\">web applications</strong>. My approach focuses on speed, responsive design, and perfect alignment with modern market standards.",
+      "p4": "Whether you are in Israel or abroad, I offer flexible solutions: accessible services to get started or premium options for complex projects. My goal is to build a digital presence that reflects you and converts."
     },
     "timeline": {
       "title": "My Journey",
@@ -490,6 +490,7 @@
     "info": {
       "email": "Email",
       "location": "Location",
+      "country": "Israel",
       "availability": "Availability",
       "availableNow": "Available for new opportunities"
     }

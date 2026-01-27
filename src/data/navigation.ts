@@ -53,7 +53,7 @@ export const siteConfig = {
   author: {
     name: "Shay Acoca",
     email: "shay.acoca@email.com",
-    location: "France",
+    location: "Israël",
     title: "CTO Junior & Développeur Fullstack",
     bio: "Développeur fullstack formé chez HackerU. Passionné par le code, le design et l'innovation. Je crée des interfaces modernes et des expériences utilisateur mémorables.",
   },

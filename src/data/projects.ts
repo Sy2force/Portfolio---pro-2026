@@ -140,7 +140,7 @@ export const projects: Project[] = [
     tags: ["Frontend", "Design System", "Storybook", "Accessibility"],
     liveUrl: "",
     githubUrl: "https://github.com/Sy2force/Design-System",
-    image: "/images/projects/design-system.jpg",
+    image: "/images/projects/design-system.svg",
     featured: false,
     date: "2023-05",
     challenges: [

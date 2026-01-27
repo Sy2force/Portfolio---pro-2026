@@ -5,8 +5,8 @@ export const videos: Video[] = [
     id: "1",
     title: "Dashboard IA",
     description: "Interface de data temps réel avec insights IA. Visualisation de données complexe et prédictions.",
-    thumbnail: "/images/videos/dashboard-thumb.jpg",
-    videoUrl: "https://player.vimeo.com/video/example1",
+    thumbnail: "/images/projects/food.svg",
+    videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     duration: "12:45",
     category: "React"
   },
@@ -14,8 +14,8 @@ export const videos: Video[] = [
     id: "2",
     title: "E-commerce Headless",
     description: "Solution Shopify + Next.js ultra-performante. Tunnel d'achat optimisé et SEO-friendly.",
-    thumbnail: "/images/videos/checkout-thumb.jpg",
-    videoUrl: "https://player.vimeo.com/video/example2",
+    thumbnail: "/images/projects/opticglass.svg",
+    videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     duration: "18:30",
     category: "eCommerce"
   },
@@ -23,8 +23,8 @@ export const videos: Video[] = [
     id: "3",
     title: "Générateur IA",
     description: "Application intégrant GPT-4 et LangChain pour la génération de contenu contextuel.",
-    thumbnail: "/images/videos/ai-streaming-thumb.jpg",
-    videoUrl: "https://player.vimeo.com/video/example3",
+    thumbnail: "/images/projects/futuristcards.svg",
+    videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     duration: "22:15",
     category: "OpenAI"
   },
@@ -32,8 +32,8 @@ export const videos: Video[] = [
     id: "4",
     title: "Design System",
     description: "UI Kit scalable avec plus de 50 composants. Documentation complète et tokens de design.",
-    thumbnail: "/images/videos/design-system-thumb.jpg",
-    videoUrl: "https://player.vimeo.com/video/example4",
+    thumbnail: "/images/projects/design-system.svg",
+    videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     duration: "35:00",
     category: "Design"
   },
@@ -41,8 +41,8 @@ export const videos: Video[] = [
     id: "5",
     title: "App Mobile Fintech",
     description: "Application React Native avec gestion de paiements et sécurité biométrique.",
-    thumbnail: "/images/videos/mobile-onboarding-thumb.jpg",
-    videoUrl: "https://player.vimeo.com/video/example5",
+    thumbnail: "/images/projects/cardpro.svg",
+    videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     duration: "15:20",
     category: "Mobile"
   },
@@ -50,8 +50,8 @@ export const videos: Video[] = [
     id: "6",
     title: "Collaboration Tool",
     description: "Outil collaboratif temps réel utilisant WebRTC et CRDT pour l'édition simultanée.",
-    thumbnail: "/images/videos/collab-cursors-thumb.jpg",
-    videoUrl: "https://player.vimeo.com/video/example6",
+    thumbnail: "/images/projects/portfolio.svg",
+    videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     duration: "28:40",
     category: "Realtime"
   }

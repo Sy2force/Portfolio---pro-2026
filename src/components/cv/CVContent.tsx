@@ -1,13 +1,12 @@
-"use client";
 
 import { motion } from "framer-motion";
 import { Download, Mail, MapPin, Briefcase, GraduationCap, Award, Code, ExternalLink, FileText, Printer } from "lucide-react";
-import { useTranslation } from "@/context/LanguageContext";
+import { useTranslation } from "@/hooks/useTranslation";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
 import { experiences, education, certifications } from "@/data/experience";
 import { skills, skillCategories } from "@/data/skills";
-import Link from "next/link";
+import { Link } from "react-router-dom";
 
 export default function CVContent() {
   const { t } = useTranslation();
@@ -46,7 +45,7 @@ export default function CVContent() {
               <Printer className="w-5 h-5" />
               Imprimer
             </Button>
-            <Link href="/contact">
+            <Link to="/contact">
               <Button variant="outline" size="lg">
                 <Mail className="w-5 h-5" />
                 {t("cv.hireMe")}
@@ -74,7 +73,7 @@ export default function CVContent() {
                 <div className="flex flex-wrap justify-center md:justify-start gap-4 text-sm text-white/80">
                   <span className="flex items-center gap-1">
                     <MapPin className="w-4 h-4" />
-                    France
+                    {t("contact.info.country")}
                   </span>
                   <span className="flex items-center gap-1">
                     <Mail className="w-4 h-4" />
@@ -111,7 +110,12 @@ export default function CVContent() {
               </h3>
               <div className="space-y-8">
                 {experiences.map((exp) => (
-                  <div key={exp.id} className="relative pl-6 border-l-2 border-violet-200 dark:border-violet-800">
+                  <motion.div
+                    key={exp.id}
+                    className="relative pl-6 border-l-2 border-violet-200 dark:border-violet-800"
+                    whileHover={{ x: 4 }}
+                    transition={{ duration: 0.2 }}
+                  >
                     <div className="absolute -left-2 top-0 w-4 h-4 rounded-full bg-violet-600" />
                     <div className="mb-2">
                       <h4 className="text-lg font-semibold text-gray-900 dark:text-white">
@@ -142,7 +146,7 @@ export default function CVContent() {
                         </Badge>
                       ))}
                     </div>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
             </motion.section>
@@ -190,7 +194,12 @@ export default function CVContent() {
               </h3>
               <div className="space-y-4">
                 {education.map((edu) => (
-                  <div key={edu.id} className="flex flex-col md:flex-row md:items-center justify-between p-4 bg-gray-50 dark:bg-gray-700/50 rounded-xl">
+                  <motion.div 
+                    key={edu.id} 
+                    className="flex flex-col md:flex-row md:items-center justify-between p-4 bg-gray-50 dark:bg-gray-700/50 rounded-xl"
+                    whileHover={{ scale: 1.01 }}
+                    transition={{ duration: 0.2 }}
+                  >
                     <div>
                       <h4 className="font-semibold text-gray-900 dark:text-white">
                         {edu.degree}
@@ -202,7 +211,7 @@ export default function CVContent() {
                     <p className="text-sm text-gray-500 dark:text-gray-400 mt-1 md:mt-0">
                       {edu.startDate} - {edu.endDate}
                     </p>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
             </motion.section>
@@ -256,12 +265,12 @@ export default function CVContent() {
             Intéressé par mon profil ? Discutons de votre projet !
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/contact">
+            <Link to="/contact">
               <Button size="lg">
                 {t("cv.proposeProject")}
               </Button>
             </Link>
-            <Link href="/projects">
+            <Link to="/projects">
               <Button variant="outline" size="lg">
                 Voir mes projets
               </Button>

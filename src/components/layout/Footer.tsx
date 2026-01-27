@@ -1,9 +1,8 @@
-"use client";
 
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Github, Linkedin, Twitter, Mail, Heart, Code } from "lucide-react";
-import { useTranslation } from "@/context/LanguageContext";
+import { useTranslation } from "@/hooks/useTranslation";
 import { socialLinks } from "@/data/navigation";
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
@@ -23,7 +22,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="md:col-span-2">
-            <Link href="/" className="inline-flex items-center gap-2 mb-4">
+            <Link to="/" className="inline-flex items-center gap-2 mb-4">
               <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-violet-600 to-indigo-600 flex items-center justify-center">
                 <span className="text-white font-bold text-lg">C</span>
               </div>
@@ -70,7 +69,7 @@ export function Footer() {
               ].map((item) => (
                 <li key={item.href}>
                   <Link
-                    href={item.href}
+                    to={item.href}
                     className="text-gray-600 dark:text-gray-400 hover:text-violet-600 dark:hover:text-violet-400 transition-colors"
                   >
                     {item.label}
@@ -88,18 +87,18 @@ export function Footer() {
             <ul className="space-y-2">
               <li>
                 <a
-                  href="mailto:contact@yourdomain.com"
+                  href="mailto:shay.acoca@email.com"
                   className="text-gray-600 dark:text-gray-400 hover:text-violet-600 dark:hover:text-violet-400 transition-colors"
                 >
-                  contact@yourdomain.com
+                  shay.acoca@email.com
                 </a>
               </li>
               <li className="text-gray-600 dark:text-gray-400">
-                Paris, France
+                {t("contact.info.country")}
               </li>
               <li>
                 <Link
-                  href="/contact"
+                  to="/contact"
                   className="inline-flex items-center gap-2 mt-2 px-4 py-2 rounded-lg bg-violet-600 text-white hover:bg-violet-700 transition-colors text-sm font-medium"
                 >
                   {t("cv.hireMe")}

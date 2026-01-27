@@ -1,4 +1,3 @@
-"use client";
 
 import { useState } from "react";
 import { motion } from "framer-motion";
@@ -6,7 +5,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { Send, Mail, MapPin, Clock, CheckCircle, AlertCircle, Upload, Briefcase, Users, Code, HelpCircle, MessageSquare } from "lucide-react";
-import { useTranslation } from "@/context/LanguageContext";
+import { useTranslation } from "@/hooks/useTranslation";
 import { Button } from "@/components/ui/Button";
 
 const contactSchema = z.object({
@@ -66,13 +65,34 @@ export default function ContactContent() {
     }
   };
 
-  const onSubmit = async () => {
+  const onSubmit = async (data: ContactFormData) => {
     setIsSubmitting(true);
     try {
-      await new Promise((resolve) => setTimeout(resolve, 1500));
-      setSubmitStatus("success");
-      reset();
-      setFileName(null);
+      const formData = new FormData();
+      formData.append("name", data.name);
+      formData.append("email", data.email);
+      formData.append("type", data.type);
+      formData.append("company", data.company || "");
+      formData.append("message", data.message);
+      if (data.file) {
+        formData.append("attachment", data.file);
+      }
+
+      const response = await fetch(`https://formspree.io/f/${process.env.NEXT_PUBLIC_FORMSPREE_ID || "PLACEHOLDER_ID"}`, {
+        method: "POST",
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        setSubmitStatus("success");
+        reset();
+        setFileName(null);
+      } else {
+        setSubmitStatus("error");
+      }
     } catch {
       setSubmitStatus("error");
     } finally {
@@ -134,7 +154,7 @@ export default function ContactContent() {
                   {t("contact.info.location")}
                 </h3>
                 <p className="text-gray-600 dark:text-gray-400">
-                  France
+                  {t("contact.info.country")}
                 </p>
               </div>
 
@@ -156,7 +176,7 @@ export default function ContactContent() {
               <div className="text-center">
                 <MapPin className="w-8 h-8 text-gray-400 mx-auto mb-2" />
                 <p className="text-sm text-gray-500 dark:text-gray-400">
-                  Paris, France
+                  Tel Aviv, Israël
                 </p>
               </div>
             </div>
@@ -221,7 +241,9 @@ export default function ContactContent() {
                   <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                     {t("contact.form.name")} *
                   </label>
-                  <input
+                  <motion.input
+                    whileFocus={{ scale: 1.01, borderColor: "#8b5cf6" }}
+                    transition={{ duration: 0.2 }}
                     type="text"
                     {...register("name")}
                     className={`w-full px-4 py-3 rounded-xl border ${
@@ -240,7 +262,9 @@ export default function ContactContent() {
                   <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                     {t("contact.form.email")} *
                   </label>
-                  <input
+                  <motion.input
+                    whileFocus={{ scale: 1.01, borderColor: "#8b5cf6" }}
+                    transition={{ duration: 0.2 }}
                     type="email"
                     {...register("email")}
                     className={`w-full px-4 py-3 rounded-xl border ${
@@ -260,7 +284,9 @@ export default function ContactContent() {
                 <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                   {t("contact.form.company")}
                 </label>
-                <input
+                <motion.input
+                  whileFocus={{ scale: 1.01, borderColor: "#8b5cf6" }}
+                  transition={{ duration: 0.2 }}
                   type="text"
                   {...register("company")}
                   className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-violet-500 transition-all"
@@ -272,7 +298,9 @@ export default function ContactContent() {
                 <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                   {t("contact.form.message")} *
                 </label>
-                <textarea
+                <motion.textarea
+                  whileFocus={{ scale: 1.01, borderColor: "#8b5cf6" }}
+                  transition={{ duration: 0.2 }}
                   {...register("message")}
                   rows={6}
                   className={`w-full px-4 py-3 rounded-xl border ${

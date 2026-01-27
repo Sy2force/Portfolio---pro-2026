@@ -1,8 +1,6 @@
-"use client";
 
 import { useState, useEffect } from "react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTheme } from "next-themes";
 import { 
@@ -15,16 +13,14 @@ import {
   ChevronDown 
 } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { useTranslation } from "@/context/LanguageContext";
-import { navItems } from "@/data/navigation";
-import { locales, localeNames, localeFlags } from "@/i18n/config";
+import { useTranslation } from "@/hooks/useTranslation";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [showThemeMenu, setShowThemeMenu] = useState(false);
   const [showLangMenu, setShowLangMenu] = useState(false);
-  const pathname = usePathname();
+  const { pathname } = useLocation();
   const { theme, setTheme } = useTheme();
   const { t, locale, setLocale } = useTranslation();
 
@@ -94,7 +90,7 @@ export function Navbar() {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <Link 
-            href="/" 
+            to="/" 
             className="relative z-10 flex items-center gap-2"
           >
             <motion.div
@@ -113,18 +109,25 @@ export function Navbar() {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-1">
-            {navItems.map((item) => (
+            {[
+              { label: 'home', href: '/' },
+              { label: 'about', href: '/about' },
+              { label: 'projects', href: '/projects' },
+              { label: 'stack', href: '/stack' },
+              { label: 'cv', href: '/cv' },
+              { label: 'contact', href: '/contact' },
+            ].map((item) => (
               <Link
                 key={item.href}
-                href={item.href}
+                to={item.href}
                 className={cn(
                   "px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200",
                   pathname === item.href
-                    ? "text-violet-600 dark:text-violet-400 bg-violet-50 dark:bg-violet-900/20"
-                    : "text-gray-600 dark:text-gray-300 hover:text-violet-600 dark:hover:text-violet-400 hover:bg-gray-100 dark:hover:bg-gray-800"
+                    ? "text-white dark:text-white bg-gradient-to-r from-violet-600 to-indigo-600 shadow-md"
+                    : "text-gray-700 dark:text-gray-200 hover:text-violet-600 dark:hover:text-violet-400 hover:bg-violet-50 dark:hover:bg-gray-800"
                 )}
               >
-                {t(`nav.${item.label.toLowerCase()}`)}
+                {t(`nav.${item.label}`)}
               </Link>
             ))}
           </div>
@@ -138,11 +141,11 @@ export function Navbar() {
                   setShowLangMenu(!showLangMenu);
                   setShowThemeMenu(false);
                 }}
-                className="flex items-center gap-1 px-3 py-2 rounded-lg text-sm font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                className="flex items-center gap-1 px-3 py-2 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-200 hover:bg-violet-50 dark:hover:bg-gray-800 transition-colors"
                 aria-label="Change language"
               >
                 <Globe className="w-4 h-4" />
-                <span className="hidden sm:inline">{localeFlags[locale]}</span>
+                <span className="hidden sm:inline text-base">{locale === 'fr' ? '🇫🇷' : '🇬🇧'}</span>
                 <ChevronDown className="w-3 h-3" />
               </button>
               <AnimatePresence>
@@ -153,22 +156,22 @@ export function Navbar() {
                     exit={{ opacity: 0, y: 10 }}
                     className="absolute right-0 mt-2 w-36 bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden"
                   >
-                    {locales.map((loc) => (
+                    {[{ code: 'fr', flag: '🇫🇷', name: 'Français' }, { code: 'en', flag: '🇬🇧', name: 'English' }].map((lang) => (
                       <button
-                        key={loc}
+                        key={lang.code}
                         onClick={() => {
-                          setLocale(loc);
+                          setLocale(lang.code as any);
                           setShowLangMenu(false);
                         }}
                         className={cn(
                           "w-full px-4 py-2 text-left text-sm flex items-center gap-2 transition-colors",
-                          locale === loc
-                            ? "bg-violet-50 dark:bg-violet-900/20 text-violet-600 dark:text-violet-400"
-                            : "text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
+                          locale === lang.code
+                            ? "bg-violet-50 dark:bg-violet-900/20 text-violet-600 dark:text-violet-400 font-medium"
+                            : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
                         )}
                       >
-                        <span>{localeFlags[loc]}</span>
-                        <span>{localeNames[loc]}</span>
+                        <span className="text-base">{lang.flag}</span>
+                        <span>{lang.name}</span>
                       </button>
                     ))}
                   </motion.div>
@@ -183,7 +186,7 @@ export function Navbar() {
                   setShowThemeMenu(!showThemeMenu);
                   setShowLangMenu(false);
                 }}
-                className="flex items-center gap-1 p-2 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                className="flex items-center gap-1 p-2 rounded-lg text-gray-700 dark:text-gray-200 hover:bg-violet-50 dark:hover:bg-gray-800 transition-colors"
                 aria-label="Change theme"
               >
                 {theme === "dark" ? (
@@ -249,10 +252,17 @@ export function Navbar() {
             initial="closed"
             animate="open"
             exit="closed"
-            className="fixed inset-0 top-16 lg:hidden bg-white dark:bg-gray-900 z-40"
+            className="fixed inset-0 top-16 lg:hidden bg-white/95 dark:bg-gray-900/95 backdrop-blur-xl z-40 border-t border-gray-200 dark:border-gray-800"
           >
             <div className="flex flex-col p-6 space-y-2">
-              {navItems.map((item, i) => (
+              {[
+                { label: 'home', href: '/' },
+                { label: 'about', href: '/about' },
+                { label: 'projects', href: '/projects' },
+                { label: 'stack', href: '/stack' },
+                { label: 'cv', href: '/cv' },
+                { label: 'contact', href: '/contact' },
+              ].map((item, i) => (
                 <motion.div
                   key={item.href}
                   variants={linkVariants}
@@ -261,16 +271,16 @@ export function Navbar() {
                   animate="open"
                 >
                   <Link
-                    href={item.href}
+                    to={item.href}
                     onClick={() => setIsOpen(false)}
                     className={cn(
                       "block px-4 py-3 rounded-xl text-lg font-medium transition-all duration-200",
                       pathname === item.href
-                        ? "text-violet-600 dark:text-violet-400 bg-violet-50 dark:bg-violet-900/20"
-                        : "text-gray-600 dark:text-gray-300 hover:text-violet-600 dark:hover:text-violet-400 hover:bg-gray-100 dark:hover:bg-gray-800"
+                        ? "text-white dark:text-white bg-gradient-to-r from-violet-600 to-indigo-600 shadow-md"
+                        : "text-gray-700 dark:text-gray-200 hover:text-violet-600 dark:hover:text-violet-400 hover:bg-violet-50 dark:hover:bg-gray-800/50"
                     )}
                   >
-                    {t(`nav.${item.label.toLowerCase()}`)}
+                    {t(`nav.${item.label}`)}
                   </Link>
                 </motion.div>
               ))}

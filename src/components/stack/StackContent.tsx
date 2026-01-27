@@ -1,9 +1,8 @@
-"use client";
 
 import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import { Monitor, Server, Cloud, Palette, Blocks, Sparkles } from "lucide-react";
-import { useTranslation } from "@/context/LanguageContext";
+import { useTranslation } from "@/hooks/useTranslation";
 import { skills, skillCategories } from "@/data/skills";
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
@@ -190,7 +189,7 @@ export default function StackContent() {
         >
           {[
             { value: skills.length + "+", label: "Technologies" },
-            { value: "8+", label: "Années d'expérience" },
+            { value: "3", label: "Ans d'expérience" },
             { value: "50+", label: "Projets réalisés" },
             { value: "100%", label: "Passion" },
           ].map((stat, index) => (

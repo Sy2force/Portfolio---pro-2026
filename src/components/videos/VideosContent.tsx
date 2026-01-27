@@ -1,9 +1,8 @@
-"use client";
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Play, X, Clock, Film } from "lucide-react";
-import { useTranslation } from "@/context/LanguageContext";
+import { useTranslation } from "@/hooks/useTranslation";
 import { videos, videoCategories } from "@/data/videos";
 
 export default function VideosContent() {

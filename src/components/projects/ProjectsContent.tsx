@@ -1,9 +1,8 @@
-"use client";
 
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Folder, Search } from "lucide-react";
-import { useTranslation } from "@/context/LanguageContext";
+import { useTranslation } from "@/hooks/useTranslation";
 import { projects, getFeaturedProjects } from "@/data/projects";
 import { ProjectCard } from "@/components/projects/ProjectCard";
 

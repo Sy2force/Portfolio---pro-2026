@@ -1,12 +1,10 @@
-"use client";
 
-import Link from "next/link";
-import Image from "next/image";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ExternalLink, Github, ArrowUpRight } from "lucide-react";
 import { Project } from "@/types";
 import { Badge } from "@/components/ui/Badge";
-import { useTranslation } from "@/context/LanguageContext";
+import { useTranslation } from "@/hooks/useTranslation";
 
 interface ProjectCardProps {
   project: Project;
@@ -23,7 +21,7 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
     >
-      <Link href={`/projects/${project.slug}`}>
+      <Link to={`/projects/${project.slug}`}>
         <motion.article
           whileHover={{ y: -8 }}
           className="group bg-white dark:bg-gray-800 rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700 h-full flex flex-col"
@@ -31,12 +29,10 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
           {/* Image */}
           <div className="relative h-56 overflow-hidden bg-gradient-to-br from-violet-100 to-indigo-100 dark:from-violet-900/20 dark:to-indigo-900/20">
             {project.image ? (
-              <Image
+              <img
                 src={project.image}
                 alt={project.title}
-                fill
-                className="object-cover transition-transform duration-500 group-hover:scale-110"
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
             ) : (
               <div className="absolute inset-0 flex items-center justify-center">

@@ -36,7 +36,7 @@
     "hero": {
       "greeting": "Bonjour, je suis",
       "name": "Shay Acoca",
-      "title": "CTO Junior. Développeur Fullstack. Formé chez HackerU.",
+      "title": "CTO Junior. Développeur Fullstack.",
       "subtitle": "Je crée des interfaces modernes et des expériences utilisateur mémorables.",
       "cta": "Découvrir mon univers",
       "ctaSecondary": "Voir mes projets"
@@ -120,7 +120,7 @@
     },
     "stats": {
       "projects": "Projets livrés",
-      "experience": "Années d'expérience",
+      "experience": "Ans d'expérience",
       "clients": "Clients satisfaits",
       "technologies": "Technologies maîtrisées"
     },
@@ -137,34 +137,34 @@
   "about": {
     "title": "À propos",
     "subtitle": "Passionné par le code, le design et l'innovation",
-    "intro": "Développeur fullstack et CTO junior formé chez HackerU, passionné par la création d'interfaces modernes et d'expériences utilisateur mémorables.",
+    "intro": "Fondateur d'Acoca Digital Services basé en Israël. Expert en développement full stack et marketing digital. Je transforme la vision des indépendants et PME en solutions digitales performantes et sur-mesure.",
     "mindset": {
       "title": "Ma philosophie",
       "items": {
         "excellence": {
-          "title": "Excellence technique",
-          "description": "Code propre, typé et testé. TypeScript, bonnes pratiques et architecture solide sont mes fondamentaux."
+          "title": "Excellence & Rigueur",
+          "description": "Ancien de l'unité Guivati, j'applique une discipline militaire à la qualité du code et au respect des délais."
         },
         "passion": {
-          "title": "Passion créative",
-          "description": "Animations fluides, interfaces modernes et expériences utilisateur mémorables. Le design est au cœur de mon code."
+          "title": "Impact Digital",
+          "description": "Créer des sites rapides, responsifs et connectés aux besoins du marché moderne pour maximiser votre visibilité."
         },
         "learning": {
-          "title": "Apprentissage continu",
-          "description": "De HackerU à l'autoformation, je reste curieux et à jour sur les dernières technologies : React, Next.js, IA."
+          "title": "Expertise 360°",
+          "description": "Du marketing digital au développement Full Stack (2024-2026), je maîtrise toute la chaîne de valeur numérique."
         },
         "vision": {
-          "title": "Vision CTO",
-          "description": "Penser architecture, scalabilité et équipe. Transformer des idées en produits qui font la différence."
+          "title": "Partenaire de Confiance",
+          "description": "Accompagner les créateurs et PME, en Israël et à l'international, avec des solutions accessibles et haut de gamme."
         }
       }
     },
     "bio": {
       "title": "Qui suis-je ?",
-      "p1": "Je suis <strong class=\"text-violet-600 dark:text-violet-400\">Shay Acoca</strong>, développeur fullstack, designer UX/UI et CTO junior. Originaire de France, j'ai découvert ma passion pour le code en 2022 et j'ai décidé de me reconvertir professionnellement. Ma formation intensive chez <strong class=\"text-violet-600 dark:text-violet-400\">HackerU</strong> m'a permis de maîtriser les technologies modernes : JavaScript, TypeScript, React, Node.js, et bien plus.",
-      "p2": "Ma passion va au-delà du code. Je suis fasciné par l'<strong class=\"text-violet-600 dark:text-violet-400\">expérience utilisateur</strong>, les <strong class=\"text-violet-600 dark:text-violet-400\">animations fluides</strong> et l'<strong class=\"text-violet-600 dark:text-violet-400\">innovation technologique</strong>. Chaque projet est une opportunité de repousser les limites, d'explorer de nouvelles interactions, de créer des interfaces qui marquent les esprits.",
-      "p3": "Mes ambitions actuelles : approfondir mes compétences en <strong class=\"text-violet-600 dark:text-violet-400\">Intelligence Artificielle</strong> (OpenAI API, LangChain, RAG), maîtriser les outils <strong class=\"text-violet-600 dark:text-violet-400\">DevOps</strong> (Docker, CI/CD, Kubernetes), et développer mon leadership en <strong class=\"text-violet-600 dark:text-violet-400\">collaboration technique</strong> pour accompagner des équipes produit.",
-      "p4": "Ma vision du rôle de <strong class=\"text-violet-600 dark:text-violet-400\">CTO</strong> : être le pont entre la vision business et l'excellence technique. Construire des architectures scalables, former des équipes passionnées, et livrer des produits qui font la différence. Le code propre, l'accessibilité et l'expérience utilisateur sont les piliers de ma philosophie."
+      "p1": "Je suis <strong class=\"text-violet-600 dark:text-violet-400\">Shay Acoca</strong>, fondateur d'<strong class=\"text-violet-600 dark:text-violet-400\">Acoca Digital Services</strong>. Basé en Israël, je combine une double compétence en <strong class=\"text-violet-600 dark:text-violet-400\">marketing digital</strong> et en <strong class=\"text-violet-600 dark:text-violet-400\">développement web full stack</strong> (formation 2024-2026). Ma mission est claire : offrir des services digitaux d'exception aux indépendants, PME et créateurs ambitieux.",
+      "p2": "Mon parcours est forgé par l'engagement. Après un service complet au sein de l'unité d'élite <strong class=\"text-violet-600 dark:text-violet-400\">Guivati</strong> de l'armée israélienne (2019-2022), j'ai conservé cette discipline de fer, cet esprit d'équipe et cette résilience pour les appliquer au monde de la tech. Je ne me contente pas de livrer un site, je m'engage pleinement dans la réussite de votre projet.",
+      "p3": "Aujourd'hui, via mon agence, je développe des <strong class=\"text-violet-600 dark:text-violet-400\">sites vitrines</strong>, <strong class=\"text-violet-600 dark:text-violet-400\">e-commerce</strong> et <strong class=\"text-violet-600 dark:text-violet-400\">applications web</strong> ultra-performants. Mon approche est centrée sur la rapidité, le responsive design et l'adéquation parfaite avec les standards du marché moderne.",
+      "p4": "Que vous soyez en Israël ou à l'international, je propose des solutions flexibles : des services accessibles pour démarrer aux options haut de gamme pour des projets complexes. Mon objectif est de construire une présence digitale qui vous ressemble et qui convertit."
     },
     "timeline": {
       "title": "Mon parcours",
@@ -490,6 +490,7 @@
     "info": {
       "email": "Email",
       "location": "Localisation",
+      "country": "Israël",
       "availability": "Disponibilité",
       "availableNow": "Disponible pour de nouvelles opportunités"
     }

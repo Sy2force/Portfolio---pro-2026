@@ -1,11 +1,10 @@
-"use client";
 
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight, Calendar, MessageSquare } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 
-import { useTranslation } from "@/context/LanguageContext";
+import { useTranslation } from "@/hooks/useTranslation";
 
 export function CTASection() {
   const { t } = useTranslation();
@@ -57,7 +56,7 @@ export function CTASection() {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link href="/contact">
+            <Link to="/contact">
               <Button
                 size="xl"
                 className="bg-white text-violet-600 hover:bg-gray-100 shadow-2xl shadow-black/20"
@@ -67,7 +66,7 @@ export function CTASection() {
                 <ArrowRight className="w-5 h-5" />
               </Button>
             </Link>
-            <Link href="/cv">
+            <Link to="/cv">
               <Button
                 variant="outline"
                 size="xl"

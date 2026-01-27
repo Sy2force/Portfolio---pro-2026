@@ -1,10 +1,9 @@
-"use client";
 
 import { useRef } from "react";
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import { motion, useInView } from "framer-motion";
 import { Download, Briefcase, GraduationCap, Award, Heart, Lightbulb, Target, Zap, MapPin, Mail, Calendar, ArrowRight } from "lucide-react";
-import { useTranslation } from "@/context/LanguageContext";
+import { useTranslation } from "@/hooks/useTranslation";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
 import { experiences, education, certifications } from "@/data/experience";
@@ -236,7 +235,7 @@ function ProfileHeader() {
             <div className="flex flex-wrap justify-center md:justify-start gap-4 text-white/80 text-sm mb-6">
               <span className="flex items-center gap-1.5">
                 <MapPin className="w-4 h-4" />
-                France
+                {t("contact.info.country")}
               </span>
               <span className="flex items-center gap-1.5">
                 <Mail className="w-4 h-4" />
@@ -249,7 +248,7 @@ function ProfileHeader() {
             </div>
 
             <div className="flex flex-wrap justify-center md:justify-start gap-3">
-              <Link href="/contact">
+              <Link to="/contact">
                 <Button className="bg-white text-violet-600 hover:bg-gray-100">
                   Me contacter
                   <ArrowRight className="w-4 h-4" />

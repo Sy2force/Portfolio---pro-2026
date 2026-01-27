@@ -1,4 +1,3 @@
-"use client";
 
 import { forwardRef, HTMLAttributes } from "react";
 import { motion } from "framer-motion";

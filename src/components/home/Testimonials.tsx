@@ -1,10 +1,9 @@
-"use client";
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { Quote, Star } from "lucide-react";
 
-import { useTranslation } from "@/context/LanguageContext";
+import { useTranslation } from "@/hooks/useTranslation";
 
 export function Testimonials() {
   const { t } = useTranslation();

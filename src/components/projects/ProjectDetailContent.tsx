@@ -1,10 +1,8 @@
-"use client";
 
-import Image from "next/image";
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowLeft, ExternalLink, Github, Calendar, CheckCircle, AlertCircle, TrendingUp } from "lucide-react";
-import { useTranslation } from "@/context/LanguageContext";
+import { useTranslation } from "@/hooks/useTranslation";
 import { Project } from "@/types";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
@@ -25,7 +23,7 @@ export default function ProjectDetailContent({ project }: ProjectDetailContentPr
           animate={{ opacity: 1, x: 0 }}
           className="mb-8"
         >
-          <Link href="/projects">
+          <Link to="/projects">
             <Button variant="ghost" size="sm">
               <ArrowLeft className="w-4 h-4" />
               Retour aux projets
@@ -85,13 +83,10 @@ export default function ProjectDetailContent({ project }: ProjectDetailContentPr
         >
           <div className="relative aspect-video rounded-2xl overflow-hidden bg-gradient-to-br from-violet-100 to-indigo-100 dark:from-violet-900/20 dark:to-indigo-900/20 border border-gray-200 dark:border-gray-700">
             {project.image ? (
-              <Image
+              <img
                 src={project.image}
                 alt={project.title}
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1000px"
-                priority
+                className="absolute inset-0 w-full h-full object-cover"
               />
             ) : (
               <div className="absolute inset-0 flex items-center justify-center">
