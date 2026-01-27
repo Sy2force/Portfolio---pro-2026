@@ -78,12 +78,20 @@ export default function ContactContent() {
         formData.append("attachment", data.file);
       }
 
-      const response = await fetch(`https://formspree.io/f/${process.env.NEXT_PUBLIC_FORMSPREE_ID || "PLACEHOLDER_ID"}`, {
+      const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+      
+      const response = await fetch(`${apiUrl}/api/contact`, {
         method: "POST",
-        body: formData,
         headers: {
-          'Accept': 'application/json'
-        }
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: data.name,
+          email: data.email,
+          company: data.company || '',
+          type: data.type,
+          message: data.message,
+        }),
       });
 
       if (response.ok) {
