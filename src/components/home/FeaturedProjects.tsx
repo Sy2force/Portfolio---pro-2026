@@ -34,7 +34,7 @@ export function FeaturedProjects() {
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-luxury-gold-100 to-luxury-gold-200 dark:from-luxury-gold-900/30 dark:to-luxury-gold-800/30 mb-4">
             <Sparkles className="w-4 h-4 text-luxury-gold-600 dark:text-luxury-gold-400" />
-            <span className="text-sm font-medium text-luxury-gold-700 dark:text-luxury-gold-300">Projets Premium</span>
+            <span className="text-sm font-medium text-luxury-gold-700 dark:text-luxury-gold-300">{t("home.featured.badge")}</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-gray-900 via-violet-900 to-indigo-900 dark:from-white dark:via-violet-200 dark:to-indigo-200 bg-clip-text text-transparent mb-4">
             {t("home.featured.title")}

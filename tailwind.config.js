@@ -144,6 +144,9 @@ export default {
         "float": "float 6s ease-in-out infinite",
         "glow": "glow 2s ease-in-out infinite",
         "slide-left": "slide-left 30s linear infinite",
+        "spin-slow": "spin 15s linear infinite",
+        "spin-reverse": "spin 15s linear infinite reverse",
+        "pulse-slow": "pulse 6s cubic-bezier(0.4, 0, 0.6, 1) infinite",
       },
       backgroundImage: {
         'luxury-gradient': 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',

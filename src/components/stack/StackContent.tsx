@@ -30,7 +30,7 @@ export default function StackContent() {
           className="text-center mb-12"
         >
           <span className="inline-block px-4 py-1.5 rounded-full bg-violet-100 dark:bg-violet-900/30 text-violet-700 dark:text-violet-300 text-sm font-medium mb-4">
-            {skills.length}+ Technologies
+            {skills.length}+ {t("stack.stats.technologies")}
           </span>
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
             {t("stack.title")}
@@ -203,10 +203,10 @@ export default function StackContent() {
           className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6"
         >
           {[
-            { value: skills.length + "+", label: "Technologies" },
-            { value: "3", label: "Ans d'expérience" },
-            { value: "50+", label: "Projets réalisés" },
-            { value: "100%", label: "Passion" },
+            { value: skills.length + "+", label: t("stack.stats.technologies") },
+            { value: "3", label: t("stack.stats.years") },
+            { value: "50+", label: t("stack.stats.projects") },
+            { value: "100%", label: t("stack.stats.passion") },
           ].map((stat, index) => (
             <div
               key={index}
