@@ -7,6 +7,8 @@ export const buttonVariants = cva(
       variant: {
         primary:
           "bg-gradient-to-r from-violet-600 to-indigo-600 text-white hover:from-violet-700 hover:to-indigo-700 shadow-lg shadow-violet-600/25",
+        luxury:
+          "bg-gradient-to-r from-luxury-gold-400 to-luxury-gold-600 text-white hover:from-luxury-gold-500 hover:to-luxury-gold-700 shadow-lg shadow-luxury-gold-500/25 border border-luxury-gold-200/20",
         secondary:
           "bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700",
         outline:

@@ -115,8 +115,8 @@ export function Hero() {
             variants={itemVariants}
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
-            <Link to="/about">
-              <Button size="lg" className="group">
+            <Link to="/contact">
+              <Button size="xl" className="group" variant="luxury">
                 {t("home.hero.cta")}
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>

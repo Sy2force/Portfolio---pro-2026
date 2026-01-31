@@ -138,7 +138,8 @@ export function FeaturedProjects() {
           <Link to="/projects">
             <Button 
               size="lg" 
-              className="group bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-700 hover:to-indigo-700 text-white shadow-luxury hover:shadow-glow border-0"
+              variant="luxury"
+              className="group"
             >
               {t("common.viewAll")}
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
