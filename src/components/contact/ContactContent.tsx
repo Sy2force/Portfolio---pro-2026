@@ -246,10 +246,11 @@ export default function ContactContent() {
               {/* Form Fields */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                     {t("contact.form.name")} *
                   </label>
                   <motion.input
+                    id="name"
                     whileFocus={{ scale: 1.01, borderColor: "#8b5cf6" }}
                     transition={{ duration: 0.2 }}
                     type="text"
@@ -267,10 +268,11 @@ export default function ContactContent() {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                     {t("contact.form.email")} *
                   </label>
                   <motion.input
+                    id="email"
                     whileFocus={{ scale: 1.01, borderColor: "#8b5cf6" }}
                     transition={{ duration: 0.2 }}
                     type="email"
@@ -289,10 +291,11 @@ export default function ContactContent() {
               </div>
 
               <div className="mb-6">
-                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                <label htmlFor="company" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                   {t("contact.form.company")}
                 </label>
                 <motion.input
+                  id="company"
                   whileFocus={{ scale: 1.01, borderColor: "#8b5cf6" }}
                   transition={{ duration: 0.2 }}
                   type="text"
@@ -303,10 +306,11 @@ export default function ContactContent() {
               </div>
 
               <div className="mb-6">
-                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                   {t("contact.form.message")} *
                 </label>
                 <motion.textarea
+                  id="message"
                   whileFocus={{ scale: 1.01, borderColor: "#8b5cf6" }}
                   transition={{ duration: 0.2 }}
                   {...register("message")}
@@ -361,6 +365,7 @@ export default function ContactContent() {
               <Button
                 type="submit"
                 size="lg"
+                variant="luxury"
                 className="w-full"
                 isLoading={isSubmitting}
               >

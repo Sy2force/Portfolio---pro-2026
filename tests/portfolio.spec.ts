@@ -83,8 +83,51 @@ test.describe('Portfolio E2E', () => {
     await submitBtn.click();
     
     // Check for validation errors
-    // The error is rendered in a <p> tag with text-red-500
-    // We expect "Le nom doit contenir..." or similar
     await expect(page.getByText(/Le nom doit contenir/i)).toBeVisible();
+  });
+
+  test('contact form submission works (mocked)', async ({ page }) => {
+    // Enable console logging for debugging
+    page.on('console', msg => console.log(`BROWSER LOG: ${msg.text()}`));
+
+    // Mock the API response BEFORE navigation
+    await page.route('**/api/contact', async route => {
+      console.log('Intercepted API call to contact endpoint');
+      const request = route.request();
+      console.log('Request method:', request.method());
+      console.log('Request post data:', request.postData());
+      
+      await route.fulfill({
+        status: 200,
+        contentType: 'application/json',
+        body: JSON.stringify({ success: true, message: 'Message envoyé avec succès !' })
+      });
+    });
+
+    await page.goto('/contact');
+
+    // Fill out the form
+    await page.getByPlaceholder('John Doe').fill('Test User');
+    await page.getByPlaceholder('john@example.com').fill('test@example.com');
+    await page.locator('textarea[name="message"]').fill('This is a test message for Playwright E2E with sufficient length.');
+
+    // Wait a moment for validation state to settle
+    await page.waitForTimeout(500);
+
+    // Submit
+    const submitBtn = page.getByRole('button', { name: /envoyer|send/i });
+    await submitBtn.click();
+
+    // Check if loading state appears
+    // The button disables when loading
+    await expect(submitBtn).toBeDisabled();
+
+    // Wait for the button to be enabled again (request finished)
+    await expect(submitBtn).toBeEnabled({ timeout: 10000 });
+
+    // Check for success message
+    const successMsg = page.getByText(/Message envoyé avec succès|Message sent successfully/i);
+    
+    await expect(successMsg).toBeVisible({ timeout: 5000 });
   });
 });

@@ -419,7 +419,7 @@ export default function AboutContent() {
           viewport={{ once: true }}
           className="text-center py-16"
         >
-          <Button size="lg" className="group">
+          <Button size="lg" className="group" variant="luxury">
             <Download className="w-5 h-5" />
             {t("about.downloadCV")}
           </Button>

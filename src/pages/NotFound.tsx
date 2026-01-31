@@ -41,7 +41,7 @@ export function NotFound() {
           className="flex items-center justify-center gap-4"
         >
           <Link to="/">
-            <Button size="lg" className="gap-2">
+            <Button size="lg" className="gap-2" variant="luxury">
               <Home className="w-4 h-4" />
               {t("notFound.home")}
             </Button>
