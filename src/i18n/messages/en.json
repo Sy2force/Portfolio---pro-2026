@@ -32,6 +32,13 @@
     "contact": "Contact",
     "blog": "Blog"
   },
+  "notFound": {
+    "title": "404",
+    "badge": "Page Not Found",
+    "description": "Sorry, the page you are looking for seems to have vanished or never existed.",
+    "home": "Home",
+    "back": "Go Back"
+  },
   "home": {
     "hero": {
       "greeting": "Hi, I'm",
@@ -459,6 +466,7 @@
     }
   },
   "contact": {
+    "badge": "Response within 24h",
     "title": "Contact",
     "subtitle": "Let's discuss your project",
     "form": {

@@ -15,67 +15,91 @@ function Timeline() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} className="py-16">
-      <motion.h2
+    <section ref={ref} className="py-24 relative overflow-hidden">
+      <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}
-        className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-12 flex items-center gap-3"
+        className="mb-16"
       >
-        <Briefcase className="w-8 h-8 text-violet-600" />
-        {t("about.timeline.title")}
-      </motion.h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-3">
+          <Briefcase className="w-8 h-8 text-violet-600" />
+          {t("about.timeline.title")}
+        </h2>
+      </motion.div>
 
-      <div className="relative">
-        <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-violet-600 via-indigo-600 to-purple-600" />
+      <div className="relative max-w-4xl mx-auto">
+        {/* Vertical Line */}
+        <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-violet-600 via-indigo-600 to-purple-600 transform md:-translate-x-1/2" />
 
         <div className="space-y-12">
           {experiences.map((exp, index) => (
             <motion.div
               key={exp.id}
-              initial={{ opacity: 0, x: -30 }}
-              animate={isInView ? { opacity: 1, x: 0 } : {}}
+              initial={{ opacity: 0, y: 30 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: index * 0.15 }}
-              className="relative pl-20"
+              className={`relative flex flex-col md:flex-row gap-8 ${
+                index % 2 === 0 ? "md:flex-row-reverse" : ""
+              }`}
             >
-              <div className="absolute left-6 w-5 h-5 rounded-full bg-violet-600 border-4 border-white dark:border-gray-900 shadow-lg" />
-              
-              <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md transition-shadow">
-                <div className="flex flex-wrap items-start justify-between gap-4 mb-4">
-                  <div>
-                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+              {/* Dot */}
+              <div className="absolute left-4 md:left-1/2 w-4 h-4 bg-violet-600 rounded-full border-4 border-white dark:border-gray-900 shadow-lg transform -translate-x-1/2 mt-1.5 z-10" />
+
+              {/* Date (Desktop) */}
+              <div className={`hidden md:flex flex-1 justify-${index % 2 === 0 ? "start" : "end"} items-start pt-1`}>
+                <Badge variant="outline" className="border-violet-200 dark:border-violet-800 text-violet-700 dark:text-violet-300">
+                  {exp.startDate} - {exp.current ? t("cv.current") : exp.endDate}
+                </Badge>
+              </div>
+
+              {/* Content Card */}
+              <div className="flex-1 ml-12 md:ml-0">
+                <div className="bg-white dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl p-6 border border-gray-100 dark:border-gray-700 shadow-lg hover:shadow-xl transition-shadow duration-300 relative group">
+                  {/* Mobile Date */}
+                  <div className="md:hidden mb-4">
+                    <Badge variant="secondary" className="bg-violet-100 dark:bg-violet-900/30 text-violet-700 dark:text-violet-300">
+                      {exp.startDate} - {exp.current ? t("cv.current") : exp.endDate}
+                    </Badge>
+                  </div>
+
+                  <div className="flex flex-col gap-1 mb-4">
+                    <h3 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-violet-600 dark:group-hover:text-violet-400 transition-colors">
                       {exp.title}
                     </h3>
-                    <p className="text-violet-600 dark:text-violet-400 font-medium">
+                    <p className="text-violet-600 dark:text-violet-400 font-medium flex items-center gap-2">
+                      <Briefcase className="w-4 h-4" />
                       {exp.company}
                     </p>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">
+                    <p className="text-sm text-gray-500 dark:text-gray-400 flex items-center gap-2">
+                      <MapPin className="w-4 h-4" />
                       {exp.location}
                     </p>
                   </div>
-                  <Badge variant={exp.current ? "default" : "secondary"}>
-                    {exp.startDate} - {exp.current ? t("cv.current") : exp.endDate}
-                  </Badge>
-                </div>
 
-                <p className="text-gray-600 dark:text-gray-400 mb-4">
-                  {exp.description}
-                </p>
+                  <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+                    {exp.description}
+                  </p>
 
-                <ul className="space-y-2 mb-4">
-                  {exp.achievements.map((achievement, i) => (
-                    <li key={i} className="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400">
-                      <span className="text-violet-600 mt-1">•</span>
-                      {achievement}
-                    </li>
-                  ))}
-                </ul>
+                  <div className="space-y-3 mb-6">
+                    {exp.achievements.map((achievement, i) => (
+                      <div key={i} className="flex items-start gap-3 text-sm text-gray-600 dark:text-gray-400">
+                        <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-violet-400 flex-shrink-0" />
+                        <span>{achievement}</span>
+                      </div>
+                    ))}
+                  </div>
 
-                <div className="flex flex-wrap gap-2">
-                  {exp.stack.map((tech) => (
-                    <Badge key={tech} variant="outline">
-                      {tech}
-                    </Badge>
-                  ))}
+                  <div className="flex flex-wrap gap-2 pt-4 border-t border-gray-100 dark:border-gray-700">
+                    {exp.stack.map((tech) => (
+                      <Badge 
+                        key={tech} 
+                        variant="outline" 
+                        className="bg-gray-50 dark:bg-gray-800/50 border-gray-200 dark:border-gray-700 hover:border-violet-300 dark:hover:border-violet-700 transition-colors"
+                      >
+                        {tech}
+                      </Badge>
+                    ))}
+                  </div>
                 </div>
               </div>
             </motion.div>

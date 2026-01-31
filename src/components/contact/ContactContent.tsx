@@ -119,7 +119,7 @@ export default function ContactContent() {
         >
           <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-violet-100 dark:bg-violet-900/30 text-violet-700 dark:text-violet-300 text-sm font-medium mb-4">
             <MessageSquare className="w-4 h-4" />
-            Réponse sous 24h
+            {t("contact.badge")}
           </span>
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
             {t("contact.title")}

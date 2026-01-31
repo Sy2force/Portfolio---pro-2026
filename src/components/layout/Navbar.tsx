@@ -15,6 +15,8 @@ import {
 import { cn } from "@/lib/utils";
 import { useTranslation } from "@/hooks/useTranslation";
 
+import { Locale } from "@/i18n/config";
+
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -160,7 +162,7 @@ export function Navbar() {
                       <button
                         key={lang.code}
                         onClick={() => {
-                          setLocale(lang.code as any);
+                          setLocale(lang.code as Locale);
                           setShowLangMenu(false);
                         }}
                         className={cn(
