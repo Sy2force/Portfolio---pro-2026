@@ -431,6 +431,16 @@
   "cv": {
     "title": "Curriculum Vitae",
     "subtitle": "Mon parcours professionnel complet",
+    "summary": {
+      "title": "Résumé Professionnel",
+      "p1": "Développeur Fullstack et CTO junior basé en Israël, formé chez HackerU, avec une expertise en conception de produits digitaux performants et évolutifs. J’interviens sur toutes les phases du cycle de vie d’une application web : cadrage produit, architecture technique, développement frontend/backend, sécurité, UX/UI, performance et déploiement cloud.",
+      "p2": "Spécialisé dans les technologies modernes (React, Next.js, TypeScript, Node.js, Express, MongoDB, Tailwind CSS), j’ai conçu et livré plusieurs projets complets pour des indépendants, PME et startups, notamment des solutions e-commerce, des dashboards personnalisés, des systèmes d’authentification sécurisés avec rôles, et des interfaces animées haut de gamme.",
+      "p3": "Mon approche est centrée sur la qualité logicielle, l’accessibilité et l’alignement produit/business. Ma double compétence en développement web et marketing digital me permet de créer des produits à la fois performants techniquement et pertinents commercialement.",
+      "p4": "Ancien soldat dans l’unité Guivati de Tsahal, j’ai développé discipline, leadership et résilience – des qualités que j’applique au quotidien dans la gestion de projets tech, en équipe ou en autonomie.",
+      "p5": "Je suis en veille constante sur les dernières technologies (DevOps, IA, CI/CD, design system, architecture scalable) et j’ai à cœur d’évoluer dans un environnement challengeant et innovant.",
+      "download": "Télécharger le CV",
+      "projects": "Voir mes projets"
+    },
     "experience": "Expérience professionnelle",
     "education": "Formation",
     "certifications": "Certifications",

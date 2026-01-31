@@ -266,10 +266,12 @@ function ProfileHeader() {
                   <ArrowRight className="w-4 h-4" />
                 </Button>
               </Link>
-              <Button variant="outline" className="border-white/30 text-white hover:bg-white/10">
-                <Download className="w-4 h-4" />
-                Télécharger CV
-              </Button>
+              <a href="/cv-shay-acoca.pdf" target="_blank" rel="noopener noreferrer">
+                <Button variant="outline" className="border-white/30 text-white hover:bg-white/10">
+                  <Download className="w-4 h-4" />
+                  Télécharger CV
+                </Button>
+              </a>
             </div>
           </div>
 
@@ -419,10 +421,12 @@ export default function AboutContent() {
           viewport={{ once: true }}
           className="text-center py-16"
         >
-          <Button size="lg" className="group" variant="luxury">
-            <Download className="w-5 h-5" />
-            {t("about.downloadCV")}
-          </Button>
+          <a href="/cv-shay-acoca.pdf" target="_blank" rel="noopener noreferrer">
+            <Button size="lg" className="group" variant="luxury">
+              <Download className="w-5 h-5" />
+              {t("about.downloadCV")}
+            </Button>
+          </a>
         </motion.div>
       </div>
     </div>
