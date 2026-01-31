@@ -87,16 +87,8 @@ test.describe('Portfolio E2E', () => {
   });
 
   test('contact form submission works (mocked)', async ({ page }) => {
-    // Enable console logging for debugging
-    page.on('console', msg => console.log(`BROWSER LOG: ${msg.text()}`));
-
     // Mock the API response BEFORE navigation
     await page.route('**/api/contact', async route => {
-      console.log('Intercepted API call to contact endpoint');
-      const request = route.request();
-      console.log('Request method:', request.method());
-      console.log('Request post data:', request.postData());
-      
       await route.fulfill({
         status: 200,
         contentType: 'application/json',
