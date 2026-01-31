@@ -144,6 +144,7 @@
   "about": {
     "title": "About",
     "subtitle": "Passionate about code, design and innovation",
+    "role": "Junior CTO • Fullstack Developer • Trained at HackerU",
     "intro": "Founder of Acoca Digital Services based in Israel. Full Stack & Digital Marketing Expert. I turn the vision of freelancers and SMEs into high-performance, tailored digital solutions.",
     "mindset": {
       "title": "My Philosophy",
@@ -504,6 +505,7 @@
     }
   },
   "footer": {
+    "brandDescription": "Creative CTO, fullstack developer and UX/UI designer. I turn ambitious ideas into exceptional digital products.",
     "rights": "All rights reserved",
     "madeWith": "Made with",
     "and": "and",

@@ -31,8 +31,7 @@ export function Footer() {
               </span>
             </Link>
             <p className="text-gray-600 dark:text-gray-400 max-w-md mb-6">
-              CTO créatif, développeur fullstack et designer UX/UI. 
-              Je transforme des idées ambitieuses en produits digitaux exceptionnels.
+              {t("footer.brandDescription")}
             </p>
             <div className="flex items-center gap-3">
               {socialLinks.map((link) => {

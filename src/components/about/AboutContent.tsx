@@ -241,7 +241,7 @@ function ProfileHeader() {
               Shay Acoca
             </h1>
             <p className="text-xl text-white/90 mb-4">
-              CTO Junior • Développeur Fullstack • Formé chez HackerU
+              {t("about.role")}
             </p>
             
             <div className="flex flex-wrap justify-center md:justify-start gap-4 text-white/80 text-sm mb-6">
